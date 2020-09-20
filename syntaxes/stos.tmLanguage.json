@@ -154,7 +154,7 @@
 				},
 				{
 					"name": "support.function.stos",
-					"match": "\\b(?i)(key|scancode|fkey|key speed|put key|input|line input)\\b"
+					"match": "\\b(?i)(scancode|fkey|key speed|put key|input|line input)\\b"
 				},
 				{
 					"name": "support.function.stos",
