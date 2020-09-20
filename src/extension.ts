@@ -574,6 +574,14 @@ export function activate(context: vscode.ExtensionContext) {
 			//Completion_lineinput.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
 			Completion_lineinput.kind = vscode.CompletionItemKind.Function;
 
+			const Completion_inkey$ = new vscode.CompletionItem('inkey$');
+			//Completion_inkey$.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_inkey$.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_input$ = new vscode.CompletionItem('input$');
+			//Completion_input$.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_input$.kind = vscode.CompletionItemKind.Function;
+
 			return [
 				Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan,
 				Completion_log, Completion_ln, Completion_exp, Completion_sqr, Completion_abs, Completion_int, Completion_sgn, Completion_max, Completion_min, Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
@@ -591,7 +599,8 @@ export function activate(context: vscode.ExtensionContext) {
 				Completion_screen$,
 				Completion_polymark, Completion_arc, Completion_earc, Completion_plot, Completion_point, Completion_draw, Completion_rbox, Completion_polyline, Completion_pie, Completion_epie, Completion_circle, Completion_bar, Completion_rbar, Completion_polygon,
 				Completion_paint, Completion_mode, Completion_flash, Completion_shift, Completion_ink, Completion_palette, Completion_colour, Completion_grwriting, Completion_setline, Completion_setmark, Completion_setpaint, Completion_setpattern, Completion_divx, Completion_divy,
-				Completion_scancode, Completion_fkey, Completion_keyspeed, Completion_putkey, Completion_input, Completion_lineinput
+				Completion_scancode, Completion_fkey, Completion_keyspeed, Completion_putkey, Completion_input, Completion_lineinput,
+				Completion_inkey$, Completion_input$
 			];
 		}
 	});
