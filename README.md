@@ -1,5 +1,5 @@
 # STOS Basic Language Support
-Syntax support for the STOS Basic language from the Atari ST, along with popular extensions such as Misty, Missing Link and Ninja Tracker.  Although this extension can be run independantly, you can enjoy an enhanced experience by also installing RScript.
+Syntax support for the STOS Basic language from the Atari ST, along with popular extensions such as Misty, Missing Link and Ninja Tracker.  Although this extension can be run independantly, you can enjoy an enhanced STOS coding experience by installing RScript.
 ## Features
 - Syntax highlighting
 - Autocompletion
@@ -24,10 +24,9 @@ Mandarin Software
 **Created and Developed by**  
 Neil Halliday  
   
-**Beta Testing by**  
+**Alpha Testing by**  
+###### (in order of signing up!)
 Geoff Harrison  
-Bruno Azzara  
-Michael Keenleyside  
 
 ![Sample light](./images/STOSCoders-dark.png)  
 **https://stoscoders.com**  
@@ -37,4 +36,4 @@ Michael Keenleyside
 **Created and developed by**  
 Baptiste Bideaux
 
-For more information, please visit https://www.youtube.com/watch?v=cO6hO3XNPW0
+For more information on RScript check out Babtiste's YouTube video https://www.youtube.com/watch?v=cO6hO3XNPW0
