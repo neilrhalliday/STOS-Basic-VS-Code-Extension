@@ -610,7 +610,30 @@ export function activate(context: vscode.ExtensionContext) {
 			//Completion_show.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
 			Completion_show.kind = vscode.CompletionItemKind.Keyword;
 
-			//(x mouse|y mouse|mouse key|change mouse|limit mouse|hide|show)
+			const Completion_joy = new vscode.CompletionItem('joy');
+			//Completion_joy.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_joy.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_jleft = new vscode.CompletionItem('jleft');
+			//Completion_jleft.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_jleft.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_jright = new vscode.CompletionItem('jright');
+			//Completion_jright.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_jright.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_jup = new vscode.CompletionItem('jup');
+			//Completion_jup.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_jup.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_jdown = new vscode.CompletionItem('jdown');
+			//Completion_jdown.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_jdown.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_fire = new vscode.CompletionItem('fire');
+			//Completion_fire.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_fire.kind = vscode.CompletionItemKind.Function;
+
 			return [
 				Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan,
 				Completion_log, Completion_ln, Completion_exp, Completion_sqr, Completion_abs, Completion_int, Completion_sgn, Completion_max, Completion_min, Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
@@ -630,7 +653,8 @@ export function activate(context: vscode.ExtensionContext) {
 				Completion_paint, Completion_mode, Completion_flash, Completion_shift, Completion_ink, Completion_palette, Completion_colour, Completion_grwriting, Completion_setline, Completion_setmark, Completion_setpaint, Completion_setpattern, Completion_divx, Completion_divy,
 				Completion_scancode, Completion_fkey, Completion_keyspeed, Completion_putkey, Completion_input, Completion_lineinput,
 				Completion_inkey$, Completion_input$,
-				Completion_xmouse, Completion_ymouse, Completion_mousekey, Completion_changemouse, Completion_limitmouse, Completion_hide, Completion_show
+				Completion_xmouse, Completion_ymouse, Completion_mousekey, Completion_changemouse, Completion_limitmouse, Completion_hide, Completion_show,
+				Completion_joy, Completion_jleft, Completion_jright, Completion_jup, Completion_jdown, Completion_fire
 			];
 		}
 	});
