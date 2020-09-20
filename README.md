@@ -6,7 +6,7 @@ Syntax support for the STOS Basic language from the Atari ST, along with popular
 - Command hints
 - STOS colour theme
 
-# STOS: The Game Creator
+## STOS: The Game Creator
 ![Sample](./images/STOS.jpg)  
 **Created by**  
 Francois Lionet  
@@ -14,7 +14,7 @@ Francois Lionet
 **Published by**  
 Mandarin Software    
 
-# STOS Basic Language Support for Visual Studio Code
+## STOS Basic Language Support for Visual Studio Code
 **Created and Developed by**  
 Neil Halliday  
   
