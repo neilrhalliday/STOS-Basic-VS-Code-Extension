@@ -104,7 +104,6 @@ function activate(context) {
             const Completion_min = new vscode.CompletionItem('min');
             //Completion_min.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_min.kind = vscode.CompletionItemKind.Function;
-            //log|ln|exp|sqr|abs|int|sgn|max|min|swap|def fn|fn|rnd|fix
             const Completion_swap = new vscode.CompletionItem('swap');
             //Completion_swap.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_swap.kind = vscode.CompletionItemKind.Function;
@@ -116,7 +115,7 @@ function activate(context) {
             Completion_fn.kind = vscode.CompletionItemKind.Function;
             const Completion_rnd = new vscode.CompletionItem('rnd');
             //Completion_rnd.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
-            Completion_fn.kind = vscode.CompletionItemKind.Function;
+            Completion_rnd.kind = vscode.CompletionItemKind.Function;
             const Completion_fix = new vscode.CompletionItem('fix');
             //Completion_fix.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_fix.kind = vscode.CompletionItemKind.Function;
@@ -300,6 +299,41 @@ function activate(context) {
             const Completion_autoback = new vscode.CompletionItem('auto back');
             //Completion_autoback.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_autoback.kind = vscode.CompletionItemKind.Keyword;
+            // (appear|fade|reduce|zoom|screen copy|screen swap|def scroll|scroll|get palette|cls|unpack|pack)
+            const Completion_appear = new vscode.CompletionItem('appear');
+            //Completion_appear.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_appear.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_fade = new vscode.CompletionItem('fade');
+            //Completion_fade.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_fade.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_reduce = new vscode.CompletionItem('reduce');
+            //Completion_reduce.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_reduce.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_zoom = new vscode.CompletionItem('zoom');
+            //Completion_zoom.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_zoom.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_screencopy = new vscode.CompletionItem('screen copy');
+            //Completion_screencopy.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_screencopy.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_defscroll = new vscode.CompletionItem('def scroll');
+            //Completion_defscroll.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_defscroll.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_scroll = new vscode.CompletionItem('scroll');
+            //Completion_scroll.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_scroll.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_getpalette = new vscode.CompletionItem('get palette');
+            //Completion_getpalette.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_getpalette.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_cls = new vscode.CompletionItem('cls');
+            //Completion_cls.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_cls.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_unpack = new vscode.CompletionItem('unpack');
+            //Completion_unpack.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_unpack.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_pack = new vscode.CompletionItem('pack');
+            //Completion_pack.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_pack.kind = vscode.CompletionItemKind.Function;
+            // (appear|fade|reduce|zoom|screen copy|screen swap|def scroll|scroll|get palette|cls|unpack|pack)
             return [
                 Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan,
                 Completion_log, Completion_ln, Completion_exp, Completion_sqr, Completion_abs, Completion_int, Completion_sgn, Completion_max, Completion_min, Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
@@ -312,7 +346,8 @@ function activate(context) {
                 Completion_read, Completion_restore,
                 Completion_call, Completion_areg, Completion_dreg, Completion_trap,
                 Completion_sprite, Completion_movex, Completion_movey, Completion_move, Completion_anim, Completion_putsprite, Completion_getsprite, Completion_update, Completion_xsprite, Completion_ysprite, Completion_movon, Completion_collide,
-                Completion_limitsprite, Completion_zone, Completion_setzone, Completion_resetzone, Completion_priority, Completion_redraw, Completion_detect, Completion_synchro, Completion_autoback
+                Completion_limitsprite, Completion_zone, Completion_setzone, Completion_resetzone, Completion_priority, Completion_redraw, Completion_detect, Completion_synchro, Completion_autoback,
+                Completion_appear, Completion_fade, Completion_reduce, Completion_zoom, Completion_screencopy, Completion_defscroll, Completion_scroll, Completion_getpalette, Completion_cls, Completion_unpack, Completion_pack
             ];
         }
     });
