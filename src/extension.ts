@@ -11,8 +11,6 @@ export function activate(context: vscode.ExtensionContext) {
 		provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext) {
 
 			// Standard STOS Basic instructions
-			//const CompletionList = new vscode.CompletionList()
-
 
 			// -- Constants
 			//true|false|on|off|up|down|in|out|freeze|vbl
@@ -42,9 +40,6 @@ export function activate(context: vscode.ExtensionContext) {
 			// *** bold italic on/off		ie.. ***Bold and Italic***
 			// <space><space><space>\n		New line
 			// \n\n							New paragraph
-
-			// \n\n_**Example**:_\n\nprint **DEG**(90)\n\nSee **RAD**
-
 
 			// -- Support Functions
 			// inc|dec|deg|rad|sin|cos|tan|asin|acos|atan|hsin|hcos|htan|log|ln|exp|sqr|abs|int|sgn|max|min|swap|def fn|fn|rnd|fix
@@ -261,7 +256,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 			const Completion_poke = new vscode.CompletionItem('poke');
 			//Completion_poke.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
-			Completion_poke.kind = vscode.CompletionItemKind.Keyword	;
+			Completion_poke.kind = vscode.CompletionItemKind.Keyword;
 
 			const Completion_deek = new vscode.CompletionItem('deek');
 			//Completion_deek.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
@@ -283,16 +278,130 @@ export function activate(context: vscode.ExtensionContext) {
 			//Completion_varptr.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
 			Completion_varptr.kind = vscode.CompletionItemKind.Function;
 
+			//(read|restore)
+			const Completion_read = new vscode.CompletionItem('read');
+			//Completion_read.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_read.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_restore = new vscode.CompletionItem('restore');
+			//Completion_restore.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_restore.kind = vscode.CompletionItemKind.Keyword;
+
+			//(call|areg|dreg|trap)
+			const Completion_call = new vscode.CompletionItem('call');
+			//Completion_call.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_call.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_areg = new vscode.CompletionItem('areg');
+			//Completion_areg.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_areg.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_dreg = new vscode.CompletionItem('dreg');
+			//Completion_dreg.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_dreg.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_trap = new vscode.CompletionItem('trap');
+			//Completion_trap.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_trap.kind = vscode.CompletionItemKind.Keyword;
+
+			//(sprite|move x|move y|move|anim|put sprite|get sprite|update|x sprite|y sprite|movon|collide|limit sprite|zone|set zone|reset zone|priority|redraw|detect|synchro|auto back)
+			const Completion_sprite = new vscode.CompletionItem('sprite');
+			//Completion_sprite.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_sprite.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_movex = new vscode.CompletionItem('move x');
+			//Completion_movex.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_movex.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_movey = new vscode.CompletionItem('move y');
+			//Completion_movey.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_movey.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_move = new vscode.CompletionItem('move');
+			//Completion_move.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_move.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_anim = new vscode.CompletionItem('anim');
+			//Completion_anim.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_anim.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_putsprite = new vscode.CompletionItem('put sprite');
+			//Completion_putsprite.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_putsprite.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_getsprite = new vscode.CompletionItem('get sprite');
+			//Completion_getsprite.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_getsprite.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_update = new vscode.CompletionItem('update');
+			//Completion_getupdate.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_update.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_xsprite = new vscode.CompletionItem('x sprite');
+			//Completion_xsprite.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_xsprite.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_ysprite = new vscode.CompletionItem('y sprite');
+			//Completion_ysprite.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_ysprite.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_movon = new vscode.CompletionItem('movon');
+			//Completion_movon.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_movon.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_collide = new vscode.CompletionItem('collide');
+			//Completion_collide.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_collide.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_limitsprite = new vscode.CompletionItem('limit sprite');
+			//Completion_limitsprite.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_limitsprite.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_zone = new vscode.CompletionItem('zone');
+			//Completion_zone.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_zone.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_setzone = new vscode.CompletionItem('set zone');
+			//Completion_setzone.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_setzone.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_resetzone = new vscode.CompletionItem('reset zone');
+			//Completion_resetzone.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_resetzone.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_priority = new vscode.CompletionItem('priority');
+			//Completion_priority.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_priority.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_redraw = new vscode.CompletionItem('redraw');
+			//Completion_redraw.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_redraw.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_detect = new vscode.CompletionItem('detect');
+			//Completion_detect.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_detect.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_synchro = new vscode.CompletionItem('synchro');
+			//Completion_synchro.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_synchro.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_autoback = new vscode.CompletionItem('auto back');
+			//Completion_autoback.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_autoback.kind = vscode.CompletionItemKind.Keyword;
 
 			return [
-				Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan, 
-				Completion_log, Completion_ln,Completion_exp, Completion_sqr, Completion_abs, Completion_int,Completion_sgn, Completion_max, Completion_min,Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
+				Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan,
+				Completion_log, Completion_ln, Completion_exp, Completion_sqr, Completion_abs, Completion_int, Completion_sgn, Completion_max, Completion_min, Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
 				Completion_key, Completion_curs, Completion_click,
 				Completion_asc, Completion_len, Completion_val,
 				Completion_upper$, Completion_lower$, Completion_flip$, Completion_space$, Completion_string$, Completion_chr$, Completion_str$, Completion_time$, Completion_date$,
-				Completion_rol,Completion_ror,Completion_btst,Completion_bset,Completion_bchg,Completion_bclr,
-				Completion_hex$,Completion_bin$,
-				Completion_peek,Completion_poke,Completion_deek,Completion_doke,Completion_leek,Completion_loke,Completion_varptr
+				Completion_rol, Completion_ror, Completion_btst, Completion_bset, Completion_bchg, Completion_bclr,
+				Completion_hex$, Completion_bin$,
+				Completion_peek, Completion_poke, Completion_deek, Completion_doke, Completion_leek, Completion_loke, Completion_varptr,
+				Completion_read, Completion_restore,
+				Completion_call, Completion_areg, Completion_dreg, Completion_trap,
+				Completion_sprite, Completion_movex, Completion_movey, Completion_move, Completion_anim, Completion_putsprite, Completion_getsprite, Completion_update, Completion_xsprite, Completion_ysprite, Completion_movon, Completion_collide,
+				Completion_limitsprite, Completion_zone, Completion_setzone, Completion_resetzone, Completion_priority, Completion_redraw, Completion_detect, Completion_synchro, Completion_autoback
 			];
 		}
 	});
