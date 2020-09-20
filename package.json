@@ -34,7 +34,8 @@
 	},
 	"categories": [
 		"Programming Languages",
-		"Themes"
+		"Themes",
+		"Snippets"
 	],
 	"contributes": {
 		"languages": [
@@ -55,6 +56,12 @@
 				"language": "stos",
 				"scopeName": "source.stos",
 				"path": "./syntaxes/stos.tmLanguage.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "stos",
+				"path": "./snippets/stos.snippets.json"
 			}
 		],
 		"themes": [
