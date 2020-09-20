@@ -1,0 +1,267 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "stos",
+	"scopeName": "source.stos",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#support"
+		},
+		{
+			"include": "#storage"
+		},
+		{
+			"include": "#expression"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.stos",
+					"match": "\\b(?i)(data|wait|timer)\\b"
+				},
+				{
+					"name": "keyword.control.stos",
+					"match": "\\b(?i)(if|then|else|else if|while|wend|for|to|next|step|goto|gosub|return|repeat|until|pop|stop|end)\\b"
+				},
+				{
+					"name": "keyword.control.stos",
+					"match": "\\b(?i)(errn|errl|error|break|resume)\\b"
+				},
+				{
+					"name": "keyword.operator.stos",
+					"match": "\\b(?i)(mod|and|not|or|xor)\\b"
+				},
+				{
+					"name": "keyword.operator.assignment.stos",
+					"match": "="
+				},
+				{
+					"name": "keyword.operator.arithmetic.stos",
+					"match": "\\*|\\-|\\+|~|=|<=|>=|<>|<|>|\\|\\||\\?\\:"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.stos",
+			"begin": "\"",
+			"end": "\""
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.stos",
+					"match": "\\b(?i)(true|false|on|off|up|down|in|out|freeze|vbl)\\b"
+				},
+				{
+					"name": "constant.numeric.stos",
+					"match": "-?\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?\\b"
+				},
+				{
+					"name": "constant.numeric.stos",
+					"match": "\\$[A-F0-9]+"
+				},
+				{
+					"name": "constant.numeric.stos",
+					"match": "%[0-1]+"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.language.stos",
+					"match": "\\b(?i)(logic|back|physic|default|free)\\b"
+				},
+				{
+					"name": "variable.language.stos",
+					"match": "(?i)(drive\\$|dir\\$)"
+				}
+			]
+		},
+		"support": {
+			"patterns": [
+				{
+					"name": "support.contstant.stos",
+					"match": "\\b(?i)(pi)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(inc|dec|deg|rad|sin|cos|tan|asin|acos|atan|hsin|hcos|htan|log|ln|exp|sqr|abs|int|sgn|max|min|swap|def fn|fn|rnd|fix)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(key|curs|click)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(asc|len|val)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "(?i)(upper\\$|lower\\$|flip\\$|space\\$|string\\$|chr\\$|str\\$|time\\$|date\\$)"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(rol|ror|btst|bset|bchg|bclr)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "(?i)(hex\\$|bin\\$)"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(peek|poke|deek|doke|leek|loke|varptr)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(read|restore)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(call|areg|dreg|trap)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(sprite|move x|move y|move|anim|put sprite|get sprite|update|x sprite|y sprite|movon|collide|limit sprite|zone|set zone|reset zone|priority|redraw|detect|synchro|auto back)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(appear|fade|reduce|zoom|screen copy|screen swap|def scroll|scroll|get palette|cls|unpack|pack)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "(?i)(screen\\$)"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(polymark|arc|earc|plot|point|draw|box|rbox|polyline|pie|epie|circle|ellipse|bar|rbar|polygon|paint|mode|flash|shift|ink|palette|colour|gr writing|set line|set mark|set paint|set pattern|clip|divx|divy)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(key|scancode|fkey|key speed|put key|input|line input)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "(?i)(inkey\\$|input\\$)"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(x mouse|y mouse|mouse key|zone|set zone|reset zone|change mouse|limit mouse|hide|show)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(joy|jleft|jright|jup|jdown|fire)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(open|close|eof|lof|pof|field|put|get|port|dir|dir next|previous|drive|drvmap|dfree|mkdir|rmdir|kill|rename)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "(?i)(dir first$|fileselect\\$)"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(llist|lprint|ldir|listbank|hardcopy|windcopy)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(music|voice|tempo|transpose|volume|envel|play|pvoice|noise|boom|bell|shoot|psg)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(border|cdown|cup|cleft|cright|tab|clw|curs|set curs|default|home|inverse|under|shade|locate|paper|pen|print|using|centre|qwindow|windopen|window|windon|windoff|windmove|windcopy|windel|scrn|title|square|xcurs|ycurs|xtext|ytext|xgraphic|ygraphic)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "(?i)(icon$)"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(menu|on menu|mnbar|mnselect)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "(?i)(menu$)"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(instr)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "(?i)(left\\$|right\\$|mid\\$)"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(sort|match)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(bcopy|bgrab|start|length|load|save|bload|bsave|copy|fill|hunt)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(charlen|charcopy)\\b"
+				},
+				{
+					"name": "support.other.gbpextension.stos",
+					"match": "\\b(?i)(lights|pready|even|setptr|special key|hcopy|d crunch|paktype|paksize|fstart|flength|foffset|fastwipe|elite unpack|tiny unpack|ca unpack|ca pack|bcls|mirror|dac volume|treble|bass|eplay|estop|eplace|jar|cookie|xpen|ypen)\\b"
+				}
+			]
+		},
+		"storage": {
+			"patterns": [
+				{
+					"name": "storage.type",
+					"match": "\\b(?i)(dim|reserve|erase|clear|let|as|screen|datascreen|set|work|data)\\b"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.stos",
+					"match": "(rem).*$\n?",
+					"captures": {
+						"1": {
+							"name": "punctuation.definition.comment.stos"
+						}
+					}
+				}
+			]
+		},
+		"expression": {
+			"paren-expression": {
+				"begin": "\\(",
+				"end": "\\)",
+				"beginCaptures": {
+					"0": {
+						"name": "punctuation.paren.open"
+					}
+				},
+				"endCaptures": {
+					"0": {
+						"name": "punctuation.paren.close"
+					}
+				}
+			}
+		}
+	}
+}
