@@ -443,6 +443,28 @@ function activate(context) {
             const Completion_input$ = new vscode.CompletionItem('input$');
             //Completion_input$.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_input$.kind = vscode.CompletionItemKind.Function;
+            const Completion_xmouse = new vscode.CompletionItem('x mouse');
+            //Completion_xmouse.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_xmouse.kind = vscode.CompletionItemKind.Function;
+            const Completion_ymouse = new vscode.CompletionItem('y mouse');
+            //Completion_ymouse.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_ymouse.kind = vscode.CompletionItemKind.Function;
+            const Completion_mousekey = new vscode.CompletionItem('mouse key');
+            //Completion_mousekey.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_mousekey.kind = vscode.CompletionItemKind.Function;
+            const Completion_changemouse = new vscode.CompletionItem('change mouse');
+            //Completion_changemouse.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_changemouse.kind = vscode.CompletionItemKind.Function;
+            const Completion_limitmouse = new vscode.CompletionItem('limit mouse');
+            //Completion_limitmouse.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_limitmouse.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_hide = new vscode.CompletionItem('hide');
+            //Completion_hide.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_hide.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_show = new vscode.CompletionItem('show');
+            //Completion_show.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_show.kind = vscode.CompletionItemKind.Keyword;
+            //(x mouse|y mouse|mouse key|change mouse|limit mouse|hide|show)
             return [
                 Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan,
                 Completion_log, Completion_ln, Completion_exp, Completion_sqr, Completion_abs, Completion_int, Completion_sgn, Completion_max, Completion_min, Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
@@ -461,7 +483,8 @@ function activate(context) {
                 Completion_polymark, Completion_arc, Completion_earc, Completion_plot, Completion_point, Completion_draw, Completion_rbox, Completion_polyline, Completion_pie, Completion_epie, Completion_circle, Completion_bar, Completion_rbar, Completion_polygon,
                 Completion_paint, Completion_mode, Completion_flash, Completion_shift, Completion_ink, Completion_palette, Completion_colour, Completion_grwriting, Completion_setline, Completion_setmark, Completion_setpaint, Completion_setpattern, Completion_divx, Completion_divy,
                 Completion_scancode, Completion_fkey, Completion_keyspeed, Completion_putkey, Completion_input, Completion_lineinput,
-                Completion_inkey$, Completion_input$
+                Completion_inkey$, Completion_input$,
+                Completion_xmouse, Completion_ymouse, Completion_mousekey, Completion_changemouse, Completion_limitmouse, Completion_hide, Completion_show
             ];
         }
     });

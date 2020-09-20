@@ -162,7 +162,7 @@
 				},
 				{
 					"name": "support.function.stos",
-					"match": "\\b(?i)(x mouse|y mouse|mouse key|zone|set zone|reset zone|change mouse|limit mouse|hide|show)\\b"
+					"match": "\\b(?i)(x mouse|y mouse|mouse key|change mouse|limit mouse|hide|show)\\b"
 				},
 				{
 					"name": "support.function.stos",
