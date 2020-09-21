@@ -860,6 +860,14 @@ export function activate(context: vscode.ExtensionContext) {
 			//Completion_mid$.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
 			Completion_mid$.kind = vscode.CompletionItemKind.Function;
 
+			const Completion_sort = new vscode.CompletionItem('sort');
+			//Completion_sort.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_sort.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_match = new vscode.CompletionItem('match');
+			//Completion_match.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_match.kind = vscode.CompletionItemKind.Function;
+
 			return [
 				Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan,
 				Completion_log, Completion_ln, Completion_exp, Completion_sqr, Completion_abs, Completion_int, Completion_sgn, Completion_max, Completion_min, Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
@@ -889,7 +897,8 @@ export function activate(context: vscode.ExtensionContext) {
 				Completion_icon$,
 				Completion_menu, Completion_onmenu, Completion_mnbar, Completion_mnselect,
 				Completion_menu$,
-				Completion_instr, Completion_left$, Completion_right$, Completion_mid$
+				Completion_instr, Completion_left$, Completion_right$, Completion_mid$,
+				Completion_sort, Completion_match
 
 			];
 		}
