@@ -827,38 +827,41 @@ function activate(context) {
             // Memory
             //
             const Completion_dim = new vscode.CompletionItem('dim');
-            //Completion_dim.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_dim.documentation = new vscode.MarkdownString('**DIM** _variablelist_\n\n**DIM** is used to set up a table of variables. These tables may consist of any number of dimensions you like, but each dimension is limited to a maximum of 65535 elements.\n\n_**Examples:**_\n\ndim A$(10,B(10,10),C#(10,10,10)\n\nIn order to access an individual element in this array, you simply type the array name followed by the index number enclosed between round brackets. It is important to note that arrays always start from zero.');
             Completion_dim.kind = vscode.CompletionItemKind.Constructor;
             const Completion_reserve = new vscode.CompletionItem('reserve');
-            //Completion_reserve.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_reserve.documentation = new vscode.MarkdownString('**RESERVE** as _type_,_y_\n\nAny banks used by sprites, music, icons, 3D extensions, and the menus are automatically allocated by the system. The **RESERVE** command allows you to allocate any other banks which you require. _NOTE:_ Banks can have numbers between 1 and 15.\n\n_**Examples:**_\n\nreserve as screen 10  \nreserve as data 10,12345\n\nSee **SCREEN**,**DATASCREEN**,**SET**,**WORK**,**DATA**.');
             Completion_reserve.kind = vscode.CompletionItemKind.Constructor;
             const Completion_erase = new vscode.CompletionItem('erase');
-            //Completion_erase.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_erase.documentation = new vscode.MarkdownString('**ERASE** _y_\n\n**ERASE** deletes the contents of memory bank _y_. As usual, _y_ can range from 1 to 15. Any memory used by this bank is freed for use by your program\n\n_**Examples:**_\n\nerase 10');
             Completion_erase.kind = vscode.CompletionItemKind.Constructor;
             const Completion_clear = new vscode.CompletionItem('clear');
-            //Completion_clear.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_clear.documentation = new vscode.MarkdownString('**CLEAR**\n\n**CLEAR** erases all the variables and all the memory banks defined by the current program. It also repositions the **READ** pointer to the first **DATA** statement in the program.');
             Completion_clear.kind = vscode.CompletionItemKind.Constructor;
             const Completion_let = new vscode.CompletionItem('let');
-            //Completion_let.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_let.documentation = new vscode.MarkdownString('**LET** _x_=_y_\n\n**LET** is used to assign a variable to a specific value. The use of **LET** is always optional and can be omitted whenever you like.\n\n_**Examples:**_\n\nlet A=1   \nlet A$="Hello" + " " + "there"   ');
             Completion_let.kind = vscode.CompletionItemKind.Constructor;
             const Completion_as = new vscode.CompletionItem('as');
-            //Completion_as.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_as.documentation = new vscode.MarkdownString('**AS**\n\n**AS** works in conjunction with the **RESERVE** command to help define the type of memory bank being created.\n\n_**Examples:**_\n\nreserve as screen  \nreserve as data   \n\nSee **RESERVE**,**SCREEN**,**DATASCREEN**,**SET**,**WORK**,**DATA**.');
             Completion_as.kind = vscode.CompletionItemKind.Constructor;
             const Completion_screen = new vscode.CompletionItem('screen');
-            //Completion_screen.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_screen.documentation = new vscode.MarkdownString('**SCREEN**\n\n**SCREEN** identifies that the memory bank being reserved is for a temporary screen of 32kb in length.\n\n_**Examples:**_\n\nreserve as set 10,12345\n\nSee **RESERVE**,**DATASCREEN**,**SET**,**WORK**,**DATA**.');
             Completion_screen.kind = vscode.CompletionItemKind.Class;
             const Completion_datascreen = new vscode.CompletionItem('datascreen');
-            //Completion_datascreen.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_datascreen.documentation = new vscode.MarkdownString('**DATASCREEN**\n\n**DATASCREEN** identifies that the memory bank being reserved is for a permanent screen of 32kb in length.\n\n_**Examples:**_\n\nreserve as set 10,12345\n\nSee **RESERVE**,**SCREEN**,**SET**,**WORK**,**DATA**.');
             Completion_datascreen.kind = vscode.CompletionItemKind.Class;
             const Completion_set = new vscode.CompletionItem('set');
-            //Completion_set.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_set.documentation = new vscode.MarkdownString('**SET**\n\n**SET** identifies that the memory bank being reserved is for a character set.\n\n_**Examples:**_\n\nreserve as set 10,12345\n\nSee **RESERVE**,**SCREEN**,**DATASCREEN**,**WORK**,**DATA**.');
             Completion_set.kind = vscode.CompletionItemKind.Class;
             const Completion_work = new vscode.CompletionItem('work');
-            //Completion_work.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_work.documentation = new vscode.MarkdownString('**WORK**\n\n**WORK** identifies that the memory bank being reserved is temporary.\n\n_**Examples:**_\n\nreserve as work 10,12345\n\nSee **RESERVE**,**SCREEN**,**DATASCREEN**,**SET**,**DATA**.');
             Completion_work.kind = vscode.CompletionItemKind.Class;
+            const Completion_memdata = new vscode.CompletionItem('data');
+            Completion_memdata.documentation = new vscode.MarkdownString('**DATA**\n\n**DATA** identifies that the memory bank being reserved is permanent.\n\n_**Examples:**_\n\nreserve as work 10,12345\n\nSee **RESERVE**,**SCREEN**,**DATASCREEN**,**SET**,**WORK**.');
+            Completion_memdata.kind = vscode.CompletionItemKind.Class;
             const Completion_data = new vscode.CompletionItem('data');
-            //Completion_data.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
-            Completion_data.kind = vscode.CompletionItemKind.Class;
+            Completion_data.documentation = new vscode.MarkdownString('**DATA** _datalist_\n\n**DATA** allows you to incorporate lists of useful data directly inside your STOS program. This data can be loaded into a variable using the **READ** instruction.\n\n_**Examples:**_\n\ndata 1,2,3,"hello"\n\nSee **READ**,**RESTORE**.');
+            Completion_data.kind = vscode.CompletionItemKind.Constructor;
             /////////////
             // Extensions
             /////////////
@@ -899,7 +902,7 @@ function activate(context) {
                 Completion_paper, Completion_pen, Completion_print, Completion_using, Completion_centre, Completion_scrn,
                 Completion_qwindow, Completion_windopen, Completion_window, Completion_windon, Completion_windoff, Completion_windmove, Completion_windcopy, Completion_windel, Completion_title,
                 Completion_xcurs, Completion_ycurs, Completion_xtext, Completion_ytext, Completion_xgraphic, Completion_ygraphic,
-                Completion_dim, Completion_reserve, Completion_erase, Completion_clear, Completion_let, Completion_as, Completion_screen, Completion_datascreen, Completion_set, Completion_work, Completion_data
+                Completion_dim, Completion_reserve, Completion_erase, Completion_clear, Completion_let, Completion_as, Completion_screen, Completion_datascreen, Completion_set, Completion_work, Completion_memdata, Completion_data
             ];
         }
     });
