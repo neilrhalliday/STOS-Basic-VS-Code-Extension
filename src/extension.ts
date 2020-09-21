@@ -1094,6 +1094,57 @@ export function activate(context: vscode.ExtensionContext) {
 			//Completion_title.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
 			Completion_title.kind = vscode.CompletionItemKind.Keyword;
 
+
+			// Memory
+			//
+			const Completion_dim = new vscode.CompletionItem('dim');
+			//Completion_dim.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_dim.kind = vscode.CompletionItemKind.Constructor;
+
+			const Completion_reserve = new vscode.CompletionItem('reserve');
+			//Completion_reserve.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_reserve.kind = vscode.CompletionItemKind.Constructor;
+
+			const Completion_erase = new vscode.CompletionItem('erase');
+			//Completion_erase.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_erase.kind = vscode.CompletionItemKind.Constructor;
+
+			const Completion_clear = new vscode.CompletionItem('clear');
+			//Completion_clear.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_clear.kind = vscode.CompletionItemKind.Constructor;
+
+			const Completion_let = new vscode.CompletionItem('let');
+			//Completion_let.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_let.kind = vscode.CompletionItemKind.Constructor;
+
+			const Completion_as = new vscode.CompletionItem('as');
+			//Completion_as.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_as.kind = vscode.CompletionItemKind.Constructor;
+
+			const Completion_screen = new vscode.CompletionItem('screen');
+			//Completion_screen.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_screen.kind = vscode.CompletionItemKind.Class;
+
+			const Completion_datascreen = new vscode.CompletionItem('datascreen');
+			//Completion_datascreen.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_datascreen.kind = vscode.CompletionItemKind.Class;
+
+			const Completion_set = new vscode.CompletionItem('set');
+			//Completion_set.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_set.kind = vscode.CompletionItemKind.Class;
+
+			const Completion_work = new vscode.CompletionItem('work');
+			//Completion_work.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_work.kind = vscode.CompletionItemKind.Class;
+
+			const Completion_data = new vscode.CompletionItem('data');
+			//Completion_data.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_data.kind = vscode.CompletionItemKind.Class;
+
+			/////////////
+			// Extensions
+			/////////////
+
 			return [
 				Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan,
 				Completion_log, Completion_ln, Completion_exp, Completion_sqr, Completion_abs, Completion_int, Completion_sgn, Completion_max, Completion_min, Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
@@ -1130,7 +1181,8 @@ export function activate(context: vscode.ExtensionContext) {
 				Completion_border, Completion_cdown, Completion_cup, Completion_cleft, Completion_cright, Completion_tab, Completion_clw, Completion_setcurs, Completion_default, Completion_home, Completion_inverse, Completion_under, Completion_shade, Completion_locate,
 				Completion_paper, Completion_pen, Completion_print, Completion_using, Completion_centre, Completion_scrn,
 				Completion_qwindow, Completion_windopen, Completion_window, Completion_windon, Completion_windoff, Completion_windmove, Completion_windcopy, Completion_windel, Completion_title,
-				Completion_xcurs, Completion_ycurs, Completion_xtext, Completion_ytext, Completion_xgraphic, Completion_ygraphic
+				Completion_xcurs, Completion_ycurs, Completion_xtext, Completion_ytext, Completion_xgraphic, Completion_ygraphic,
+				Completion_dim, Completion_reserve, Completion_erase, Completion_clear, Completion_let, Completion_as, Completion_screen, Completion_datascreen, Completion_set, Completion_work, Completion_data
 
 			];
 		}
