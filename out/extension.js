@@ -353,9 +353,15 @@ function activate(context) {
             const Completion_draw = new vscode.CompletionItem('draw');
             //Completion_draw.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_draw.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_box = new vscode.CompletionItem('box');
+            //Completion_box.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_box.kind = vscode.CompletionItemKind.Keyword;
             const Completion_rbox = new vscode.CompletionItem('rbox');
             //Completion_rbox.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_rbox.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_square = new vscode.CompletionItem('square');
+            //Completion_square.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_square.kind = vscode.CompletionItemKind.Keyword;
             const Completion_polyline = new vscode.CompletionItem('polyline');
             //Completion_polyline.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_polyline.kind = vscode.CompletionItemKind.Keyword;
@@ -563,9 +569,6 @@ function activate(context) {
             const Completion_hardcopy = new vscode.CompletionItem('hardcopy');
             //Completion_hardcopy.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_hardcopy.kind = vscode.CompletionItemKind.Keyword;
-            const Completion_windcopy = new vscode.CompletionItem('windcopy');
-            //Completion_windcopy.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
-            Completion_windcopy.kind = vscode.CompletionItemKind.Keyword;
             const Completion_music = new vscode.CompletionItem('music');
             //Completion_music.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_music.kind = vscode.CompletionItemKind.Keyword;
@@ -691,12 +694,121 @@ function activate(context) {
             const Completion_hunt = new vscode.CompletionItem('hunt');
             //Completion_hunt.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_hunt.kind = vscode.CompletionItemKind.Function;
+            // Characters & Text
+            // 
             const Completion_charlen = new vscode.CompletionItem('charlen');
             //Completion_charlen.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_charlen.kind = vscode.CompletionItemKind.Function;
             const Completion_charcopy = new vscode.CompletionItem('charcopy');
             //Completion_charcopy.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_charcopy.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_border = new vscode.CompletionItem('border');
+            //Completion_border.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_border.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_cdown = new vscode.CompletionItem('cdown');
+            //Completion_cdown.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_cdown.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_cup = new vscode.CompletionItem('cup');
+            //Completion_cup.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_cup.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_cleft = new vscode.CompletionItem('cleft');
+            //Completion_cleft.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_cleft.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_cright = new vscode.CompletionItem('cright');
+            //Completion_cright.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_cright.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_tab = new vscode.CompletionItem('tab');
+            //Completion_tab.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_tab.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_clw = new vscode.CompletionItem('clw');
+            //Completion_clw.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_clw.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_setcurs = new vscode.CompletionItem('set curs');
+            //Completion_setcurs.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_setcurs.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_default = new vscode.CompletionItem('default');
+            //Completion_default.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_default.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_home = new vscode.CompletionItem('home');
+            //Completion_home.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_home.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_inverse = new vscode.CompletionItem('inverse');
+            //Completion_inverse.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_inverse.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_under = new vscode.CompletionItem('under');
+            //Completion_under.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_under.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_shade = new vscode.CompletionItem('shade');
+            //Completion_shade.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_shade.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_locate = new vscode.CompletionItem('locate');
+            //Completion_locate.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_locate.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_paper = new vscode.CompletionItem('paper');
+            //Completion_paper.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_paper.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_pen = new vscode.CompletionItem('pen');
+            //Completion_pen.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_pen.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_print = new vscode.CompletionItem('print');
+            //Completion_print.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_print.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_using = new vscode.CompletionItem('using');
+            //Completion_using.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_using.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_centre = new vscode.CompletionItem('centre');
+            //Completion_centre.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_centre.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_scrn = new vscode.CompletionItem('scrn');
+            //Completion_scrn.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_scrn.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_xcurs = new vscode.CompletionItem('xcurs');
+            //Completion_xcurs.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_xcurs.kind = vscode.CompletionItemKind.Function;
+            const Completion_ycurs = new vscode.CompletionItem('ycurs');
+            //Completion_ycurs.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_ycurs.kind = vscode.CompletionItemKind.Function;
+            const Completion_xtext = new vscode.CompletionItem('xtext');
+            //Completion_xtext.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_xtext.kind = vscode.CompletionItemKind.Function;
+            const Completion_ytext = new vscode.CompletionItem('ytext');
+            //Completion_ytext.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_ytext.kind = vscode.CompletionItemKind.Function;
+            const Completion_xgraphic = new vscode.CompletionItem('xgraphic');
+            //Completion_xgraphic.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_xgraphic.kind = vscode.CompletionItemKind.Function;
+            const Completion_ygraphic = new vscode.CompletionItem('ygraphic');
+            //Completion_ygraphic.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_ygraphic.kind = vscode.CompletionItemKind.Function;
+            // Windows
+            //
+            const Completion_qwindow = new vscode.CompletionItem('qwindow');
+            //Completion_qwindow.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_qwindow.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_windopen = new vscode.CompletionItem('windopen');
+            //Completion_windopen.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_windopen.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_window = new vscode.CompletionItem('window');
+            //Completion_window.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_window.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_windon = new vscode.CompletionItem('windon');
+            //Completion_windon.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_windon.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_windoff = new vscode.CompletionItem('windoff');
+            //Completion_windoff.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_windoff.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_windmove = new vscode.CompletionItem('windmove');
+            //Completion_windmove.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_windmove.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_windcopy = new vscode.CompletionItem('windcopy');
+            //Completion_windcopy.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_windcopy.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_windel = new vscode.CompletionItem('windel');
+            //Completion_windel.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_windel.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_title = new vscode.CompletionItem('title');
+            //Completion_title.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_title.kind = vscode.CompletionItemKind.Keyword;
             return [
                 Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan,
                 Completion_log, Completion_ln, Completion_exp, Completion_sqr, Completion_abs, Completion_int, Completion_sgn, Completion_max, Completion_min, Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
@@ -712,7 +824,7 @@ function activate(context) {
                 Completion_limitsprite, Completion_zone, Completion_setzone, Completion_resetzone, Completion_priority, Completion_redraw, Completion_detect, Completion_synchro, Completion_autoback,
                 Completion_appear, Completion_fade, Completion_reduce, Completion_zoom, Completion_screencopy, Completion_defscroll, Completion_scroll, Completion_getpalette, Completion_cls, Completion_unpack, Completion_pack,
                 Completion_screen$,
-                Completion_polymark, Completion_arc, Completion_earc, Completion_plot, Completion_point, Completion_draw, Completion_rbox, Completion_polyline, Completion_pie, Completion_epie, Completion_circle, Completion_bar, Completion_rbar, Completion_polygon,
+                Completion_polymark, Completion_arc, Completion_earc, Completion_plot, Completion_point, Completion_draw, Completion_box, Completion_rbox, Completion_square, Completion_polyline, Completion_pie, Completion_epie, Completion_circle, Completion_bar, Completion_rbar, Completion_polygon,
                 Completion_paint, Completion_mode, Completion_flash, Completion_shift, Completion_ink, Completion_palette, Completion_colour, Completion_grwriting, Completion_setline, Completion_setmark, Completion_setpaint, Completion_setpattern, Completion_divx, Completion_divy,
                 Completion_scancode, Completion_fkey, Completion_keyspeed, Completion_putkey, Completion_input, Completion_lineinput,
                 Completion_inkey$, Completion_input$,
@@ -720,7 +832,7 @@ function activate(context) {
                 Completion_joy, Completion_jleft, Completion_jright, Completion_jup, Completion_jdown, Completion_fire,
                 Completion_open, Completion_close, Completion_eof, Completion_lof, Completion_pof, Completion_field, Completion_put, Completion_get, Completion_port, Completion_dir, Completion_previous, Completion_drive, Completion_drvmap, Completion_dfree, Completion_mkdir,
                 Completion_rmdir, Completion_kill, Completion_dir$, Completion_dirfirst$, Completion_dirnext$, Completion_fileselect$,
-                Completion_llist, Completion_lprint, Completion_ldir, Completion_llistbank, Completion_hardcopy, Completion_windcopy,
+                Completion_llist, Completion_lprint, Completion_ldir, Completion_llistbank, Completion_hardcopy,
                 Completion_music, Completion_voice, Completion_tempo, Completion_transpose, Completion_volume, Completion_envel, Completion_play, Completion_noise, Completion_boom, Completion_bell, Completion_shoot, Completion_psg,
                 Completion_tremolo, Completion_stoptremolo, Completion_stopnoise, Completion_noiseonly, Completion_ntremolo,
                 Completion_icon$,
@@ -729,7 +841,11 @@ function activate(context) {
                 Completion_instr, Completion_left$, Completion_right$, Completion_mid$,
                 Completion_sort, Completion_match,
                 Completion_bcopy, Completion_bgrab, Completion_start, Completion_length, Completion_load, Completion_save, Completion_bload, Completion_bsave, Completion_copy, Completion_fill, Completion_hunt,
-                Completion_charlen, Completion_charcopy
+                Completion_charlen, Completion_charcopy,
+                Completion_border, Completion_cdown, Completion_cup, Completion_cleft, Completion_cright, Completion_tab, Completion_clw, Completion_setcurs, Completion_default, Completion_home, Completion_inverse, Completion_under, Completion_shade, Completion_locate,
+                Completion_paper, Completion_pen, Completion_print, Completion_using, Completion_centre, Completion_scrn,
+                Completion_qwindow, Completion_windopen, Completion_window, Completion_windon, Completion_windoff, Completion_windmove, Completion_windcopy, Completion_windel, Completion_title,
+                Completion_xcurs, Completion_ycurs, Completion_xtext, Completion_ytext, Completion_xgraphic, Completion_ygraphic
             ];
         }
     });
