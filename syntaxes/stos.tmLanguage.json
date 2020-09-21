@@ -90,7 +90,7 @@
 				},
 				{
 					"name": "variable.language.stos",
-					"match": "(?i)(drive\\$|dir\\$)"
+					"match": "(?i)(drive\\$|dir|drive|dfree|drvmap)"
 				}
 			]
 		},
@@ -170,11 +170,11 @@
 				},
 				{
 					"name": "support.function.stos",
-					"match": "\\b(?i)(open|close|eof|lof|pof|field|put|get|port|dir|dir next|previous|drive|drvmap|dfree|mkdir|rmdir|kill|rename)\\b"
+					"match": "\\b(?i)(open|close|eof|lof|pof|field|put|get|port|previous|mkdir|rmdir|kill|rename)\\b"
 				},
 				{
 					"name": "support.function.stos",
-					"match": "(?i)(dir first$|fileselect\\$)"
+					"match": "(?i)(dir\\$|dir first\\$|dir next$|fileselect\\$)"
 				},
 				{
 					"name": "support.function.stos",
