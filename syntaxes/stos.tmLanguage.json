@@ -186,11 +186,7 @@
 				},
 				{
 					"name": "support.function.stos",
-					"match": "\\b(?i)(border|cdown|cup|cleft|cright|tab|clw|curs|set curs|default|home|inverse|under|shade|locate|paper|pen|print|using|centre|qwindow|windopen|window|windon|windoff|windmove|windcopy|windel|scrn|title|square|xcurs|ycurs|xtext|ytext|xgraphic|ygraphic)\\b"
-				},
-				{
-					"name": "support.function.stos",
-					"match": "(?i)(icon$)"
+					"match": "(?i)(icon\\$)"
 				},
 				{
 					"name": "support.function.stos",
@@ -219,6 +215,10 @@
 				{
 					"name": "support.function.stos",
 					"match": "\\b(?i)(charlen|charcopy)\\b"
+				},
+				{
+					"name": "support.function.stos",
+					"match": "\\b(?i)(border|cdown|cup|cleft|cright|tab|clw|curs|set curs|default|home|inverse|under|shade|locate|paper|pen|print|using|centre|qwindow|windopen|window|windon|windoff|windmove|windcopy|windel|scrn|title|square|xcurs|ycurs|xtext|ytext|xgraphic|ygraphic)\\b"
 				},
 				{
 					"name": "support.other.gbpextension.stos",

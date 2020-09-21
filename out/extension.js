@@ -620,6 +620,25 @@ function activate(context) {
             const Completion_ntremolo = new vscode.CompletionItem('ntremolo');
             //Completion_ntremolo.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_ntremolo.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_icon$ = new vscode.CompletionItem('icon$');
+            //Completion_icon$.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_icon$.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_menu = new vscode.CompletionItem('menu');
+            //Completion_menu.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_menu.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_onmenu = new vscode.CompletionItem('on menu');
+            //Completion_onmenu.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_onmenu.kind = vscode.CompletionItemKind.Keyword;
+            const Completion_mnbar = new vscode.CompletionItem('mnbar');
+            //Completion_mnbar.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_mnbar.kind = vscode.CompletionItemKind.Function;
+            const Completion_mnselect = new vscode.CompletionItem('mnselect');
+            //Completion_mnselect.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_mnselect.kind = vscode.CompletionItemKind.Function;
+            const Completion_menu$ = new vscode.CompletionItem('menu$');
+            //Completion_menu$.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_menu$.kind = vscode.CompletionItemKind.Keyword;
+            //(menu|on menu|mnbar|mnselect)
             return [
                 Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan,
                 Completion_log, Completion_ln, Completion_exp, Completion_sqr, Completion_abs, Completion_int, Completion_sgn, Completion_max, Completion_min, Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
@@ -645,7 +664,10 @@ function activate(context) {
                 Completion_rmdir, Completion_kill, Completion_dir$, Completion_dirfirst$, Completion_dirnext$, Completion_fileselect$,
                 Completion_llist, Completion_lprint, Completion_ldir, Completion_llistbank, Completion_hardcopy, Completion_windcopy,
                 Completion_music, Completion_voice, Completion_tempo, Completion_transpose, Completion_volume, Completion_envel, Completion_play, Completion_noise, Completion_boom, Completion_bell, Completion_shoot, Completion_psg,
-                Completion_tremolo, Completion_stoptremolo, Completion_stopnoise, Completion_noiseonly, Completion_ntremolo
+                Completion_tremolo, Completion_stoptremolo, Completion_stopnoise, Completion_noiseonly, Completion_ntremolo,
+                Completion_icon$,
+                Completion_menu, Completion_onmenu, Completion_mnbar, Completion_mnselect,
+                Completion_menu$
             ];
         }
     });
