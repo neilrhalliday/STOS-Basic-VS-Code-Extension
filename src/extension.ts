@@ -681,11 +681,11 @@ export function activate(context: vscode.ExtensionContext) {
 			const Completion_drive = new vscode.CompletionItem('drive');
 			//Completion_drive.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
 			Completion_drive.kind = vscode.CompletionItemKind.Property;
-			
+
 			const Completion_drvmap = new vscode.CompletionItem('drvmap');
 			//Completion_drvmap.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
 			Completion_drvmap.kind = vscode.CompletionItemKind.Property;
-			
+
 			const Completion_dfree = new vscode.CompletionItem('dfree');
 			//Completion_dfree.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
 			Completion_dfree.kind = vscode.CompletionItemKind.Property;
@@ -705,8 +705,8 @@ export function activate(context: vscode.ExtensionContext) {
 			const Completion_rename = new vscode.CompletionItem('rename');
 			//Completion_rename.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
 			Completion_rename.kind = vscode.CompletionItemKind.Keyword;
-			
-			
+
+
 			const Completion_dir$ = new vscode.CompletionItem('dir$');
 			//Completion_dir$.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
 			Completion_dir$.kind = vscode.CompletionItemKind.Keyword;
@@ -748,7 +748,78 @@ export function activate(context: vscode.ExtensionContext) {
 			Completion_windcopy.kind = vscode.CompletionItemKind.Keyword;
 
 
-			// (llist|lprint|ldir|listbank|hardcopy|windcopy)
+			const Completion_music = new vscode.CompletionItem('music');
+			//Completion_music.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_music.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_voice = new vscode.CompletionItem('voice');
+			//Completion_voice.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_voice.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_tempo = new vscode.CompletionItem('tempo');
+			//Completion_tempo.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_tempo.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_transpose = new vscode.CompletionItem('transpose');
+			//Completion_transpose.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_transpose.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_volume = new vscode.CompletionItem('volume');
+			//Completion_volume.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_volume.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_envel = new vscode.CompletionItem('envel');
+			//Completion_envel.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_envel.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_play = new vscode.CompletionItem('play');
+			//Completion_play.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_play.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_pvoice = new vscode.CompletionItem('pvoice');
+			//Completion_pvoice.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_pvoice.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_noise = new vscode.CompletionItem('noise');
+			//Completion_noise.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_noise.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_boom = new vscode.CompletionItem('boom');
+			//Completion_boom.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_boom.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_bell = new vscode.CompletionItem('bell');
+			//Completion_bell.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_bell.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_shoot = new vscode.CompletionItem('shoot');
+			//Completion_shoot.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_shoot.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_psg = new vscode.CompletionItem('psg');
+			//Completion_psg.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_psg.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_tremolo = new vscode.CompletionItem('tremolo');
+			//Completion_tremolo.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_tremolo.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_stoptremolo = new vscode.CompletionItem('stop tremolo');
+			//Completion_stoptremolo.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_stoptremolo.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_stopnoise = new vscode.CompletionItem('stop noise');
+			//Completion_stopnoise.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_stopnoise.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_noiseonly = new vscode.CompletionItem('noise only');
+			//Completion_noiseonly.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_noiseonly.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_ntremolo = new vscode.CompletionItem('ntremolo');
+			//Completion_ntremolo.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_ntremolo.kind = vscode.CompletionItemKind.Keyword;
+
 			return [
 				Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan,
 				Completion_log, Completion_ln, Completion_exp, Completion_sqr, Completion_abs, Completion_int, Completion_sgn, Completion_max, Completion_min, Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
@@ -770,9 +841,11 @@ export function activate(context: vscode.ExtensionContext) {
 				Completion_inkey$, Completion_input$,
 				Completion_xmouse, Completion_ymouse, Completion_mousekey, Completion_changemouse, Completion_limitmouse, Completion_hide, Completion_show,
 				Completion_joy, Completion_jleft, Completion_jright, Completion_jup, Completion_jdown, Completion_fire,
-				Completion_open, Completion_close, Completion_eof, Completion_lof, Completion_pof, Completion_field, Completion_put, Completion_get, Completion_port, Completion_dir, Completion_previous, Completion_drive, Completion_drvmap, Completion_dfree, Completion_mkdir, 
+				Completion_open, Completion_close, Completion_eof, Completion_lof, Completion_pof, Completion_field, Completion_put, Completion_get, Completion_port, Completion_dir, Completion_previous, Completion_drive, Completion_drvmap, Completion_dfree, Completion_mkdir,
 				Completion_rmdir, Completion_kill, Completion_dir$, Completion_dirfirst$, Completion_dirnext$, Completion_fileselect$,
-				Completion_llist, Completion_lprint, Completion_ldir, Completion_llistbank, Completion_hardcopy, Completion_windcopy
+				Completion_llist, Completion_lprint, Completion_ldir, Completion_llistbank, Completion_hardcopy, Completion_windcopy,
+				Completion_music, Completion_voice, Completion_tempo, Completion_transpose, Completion_volume, Completion_envel, Completion_play, Completion_noise, Completion_boom, Completion_bell, Completion_shoot, Completion_psg,
+				Completion_tremolo, Completion_stoptremolo, Completion_stopnoise, Completion_noiseonly, Completion_ntremolo
 
 			];
 		}

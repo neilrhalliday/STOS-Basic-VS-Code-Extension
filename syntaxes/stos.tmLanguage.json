@@ -182,7 +182,7 @@
 				},
 				{
 					"name": "support.function.stos",
-					"match": "\\b(?i)(music|voice|tempo|transpose|volume|envel|play|pvoice|noise|boom|bell|shoot|psg)\\b"
+					"match": "\\b(?i)(music|voice|tempo|transpose|volume|envel|play|pvoice|noise|boom|bell|shoot|psg|tremolo|stop tremolo|stop noise|noise only|ntremolo)\\b"
 				},
 				{
 					"name": "support.function.stos",
