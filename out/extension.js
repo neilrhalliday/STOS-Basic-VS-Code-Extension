@@ -795,34 +795,34 @@ function activate(context) {
             // Windows
             //
             const Completion_key = new vscode.CompletionItem('key');
-            //Completion_key.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_key.documentation = new vscode.MarkdownString('**KEY** _on_/_off_\n\n**KEY** is used to turn the function key window on or off. You can still select the functions when the window is off by pressing the relevant function keys.');
             Completion_key.kind = vscode.CompletionItemKind.Function;
             const Completion_qwindow = new vscode.CompletionItem('qwindow');
-            //Completion_qwindow.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_qwindow.documentation = new vscode.MarkdownString('**QWINDOW** _n_)\n\n**QWINDOW** sets the current window to _n_, but does not redraw the window. It should therefore only be used if you\' absolutely sure that the window has not been overwritten by something else.');
             Completion_qwindow.kind = vscode.CompletionItemKind.Keyword;
             const Completion_windopen = new vscode.CompletionItem('windopen');
-            //Completion_windopen.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_windopen.documentation = new vscode.MarkdownString('**WINDOPEN** _n_,_x_,_y_,_w_,_h_,_border_,_set_\n\n**WINDOPEN** allows you to create a window on the ST\'s screen. _n_ is the number of the screen, _x_ & _y_ are the text coordinates, _w_ & _h_ specifies the size in characters. You can also specify one of 16 border styles with _border_ and one of 16 character sets with _set_. However, these two parameters do not need to be provided.');
             Completion_windopen.kind = vscode.CompletionItemKind.Keyword;
             const Completion_window = new vscode.CompletionItem('window');
-            //Completion_window.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_window.documentation = new vscode.MarkdownString('**WINDOW** _n_,_x_,_y_,_w_,_h_\n\n**WINDOW** sets the current window to window number _n_. It then redraws the window along with any of its contents. This instruction should normally only be used when a number of windows overlap on the screen. If this is not the case, then it makes more sense to use the **QWINDOW** command.\n\n_**Example:**_\n\nnew   \n10 for I=1 to 13   \n20 windopen I,I+5,I+2,20,8   \n30 next I  \n\nNow type the lines  \n\nrun  \nwindow 5  \nwindow 10');
             Completion_window.kind = vscode.CompletionItemKind.Keyword;
             const Completion_windon = new vscode.CompletionItem('windon');
-            //Completion_windon.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
-            Completion_windon.kind = vscode.CompletionItemKind.Keyword;
+            Completion_windon.documentation = new vscode.MarkdownString('_x_=**WINDON**\n\n**WINDON** returns the number of the currently active window.\n\n_**Example:**_\n\nnew  \n10 windopen rnd(12)+1,10,10,10,10   \n20 print "Window number ",WINDON," Activated"   \n\nSee **WINDOW**,**WINDOPEN**,**WINDMOVE**,**WINDEL**');
+            Completion_windon.kind = vscode.CompletionItemKind.Function;
             const Completion_windoff = new vscode.CompletionItem('windoff');
             //Completion_windoff.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_windoff.kind = vscode.CompletionItemKind.Keyword;
             const Completion_windmove = new vscode.CompletionItem('windmove');
-            //Completion_windmove.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_windmove.documentation = new vscode.MarkdownString('**WINDMOVE** _x_,_y_\n\n**WINDMOVE** moves both the current window and its contents to a new part of the screen as specified by the text coordinates _x_,_y_. These coordinates are based on the character size of the window which is moved.\n\n_**Example:**_\n\nwindopen 1,0,2,30,10   \nwindmove 5,4   \n\nSee **WINDOW**,**WINDOPEN**,**WINDMOVE**,**WINDEL**');
             Completion_windmove.kind = vscode.CompletionItemKind.Keyword;
             const Completion_windcopy = new vscode.CompletionItem('windcopy');
-            //Completion_windcopy.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_windcopy.documentation = new vscode.MarkdownString('**WINDCOPY**\n\nUnlike **HARDCOPY**, the **WINDCOPY** command prints out the text in the currently open window. As you would expect, it is much faster than the graphics dump produced by **HARDCOPY**');
             Completion_windcopy.kind = vscode.CompletionItemKind.Keyword;
             const Completion_windel = new vscode.CompletionItem('windel');
-            //Completion_windel.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_windel.documentation = new vscode.MarkdownString('**WINDEL** _n_\n\n**WINDEL** deletes the window number _n_, and erases it from the screen. If the window to be deleted is the current window, the the current window will be set to the window with the next lowest number, and this will be redrawn automatically.\n\nSee **WINDOW**,**WINDOPEN**,**WINDMOVE**,**WINDEL**');
             Completion_windel.kind = vscode.CompletionItemKind.Keyword;
             const Completion_title = new vscode.CompletionItem('title');
-            //Completion_title.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_title.documentation = new vscode.MarkdownString('**TITLE** _A$_\n\nThe **TITLE** instruction sets the top line of the current window to the title string in _A$_. If the length of this string is less than the width of the window, then it is centred. This title will now be displayed along with the window, until it is deleted by using the **BORDER** command with no parameter.\n\n_**Example:**_\n\ntitle "Window number 5"   \n\nSee **BORDER**,**WINDOW**,**WINDOPEN**');
             Completion_title.kind = vscode.CompletionItemKind.Keyword;
             // Memory
             //
@@ -833,7 +833,7 @@ function activate(context) {
             Completion_reserve.documentation = new vscode.MarkdownString('**RESERVE** as _type_,_y_\n\nAny banks used by sprites, music, icons, 3D extensions, and the menus are automatically allocated by the system. The **RESERVE** command allows you to allocate any other banks which you require. _NOTE:_ Banks can have numbers between 1 and 15.\n\n_**Examples:**_\n\nreserve as screen 10  \nreserve as data 10,12345\n\nSee **SCREEN**,**DATASCREEN**,**SET**,**WORK**,**DATA**.');
             Completion_reserve.kind = vscode.CompletionItemKind.Constructor;
             const Completion_erase = new vscode.CompletionItem('erase');
-            Completion_erase.documentation = new vscode.MarkdownString('**ERASE** _y_\n\n**ERASE** deletes the contents of memory bank _y_. As usual, _y_ can range from 1 to 15. Any memory used by this bank is freed for use by your program\n\n_**Examples:**_\n\nerase 10');
+            Completion_erase.documentation = new vscode.MarkdownString('**ERASE** _y_\n\n**ERASE** deletes the contents of memory bank _y_. As usual, _y_ can range from 1 to 15. Any memory used by this bank is freed for use by your program\n\n_**Example:**_\n\nerase 10');
             Completion_erase.kind = vscode.CompletionItemKind.Constructor;
             const Completion_clear = new vscode.CompletionItem('clear');
             Completion_clear.documentation = new vscode.MarkdownString('**CLEAR**\n\n**CLEAR** erases all the variables and all the memory banks defined by the current program. It also repositions the **READ** pointer to the first **DATA** statement in the program.');
@@ -845,22 +845,22 @@ function activate(context) {
             Completion_as.documentation = new vscode.MarkdownString('**AS**\n\n**AS** works in conjunction with the **RESERVE** command to help define the type of memory bank being created.\n\n_**Examples:**_\n\nreserve as screen  \nreserve as data   \n\nSee **RESERVE**,**SCREEN**,**DATASCREEN**,**SET**,**WORK**,**DATA**.');
             Completion_as.kind = vscode.CompletionItemKind.Constructor;
             const Completion_screen = new vscode.CompletionItem('screen');
-            Completion_screen.documentation = new vscode.MarkdownString('**SCREEN**\n\n**SCREEN** identifies that the memory bank being reserved is for a temporary screen of 32kb in length.\n\n_**Examples:**_\n\nreserve as set 10,12345\n\nSee **RESERVE**,**DATASCREEN**,**SET**,**WORK**,**DATA**.');
+            Completion_screen.documentation = new vscode.MarkdownString('**SCREEN**\n\n**SCREEN** identifies that the memory bank being reserved is for a temporary screen of 32kb in length.\n\n_**Example:**_\n\nreserve as set 10,12345\n\nSee **RESERVE**,**DATASCREEN**,**SET**,**WORK**,**DATA**.');
             Completion_screen.kind = vscode.CompletionItemKind.Class;
             const Completion_datascreen = new vscode.CompletionItem('datascreen');
-            Completion_datascreen.documentation = new vscode.MarkdownString('**DATASCREEN**\n\n**DATASCREEN** identifies that the memory bank being reserved is for a permanent screen of 32kb in length.\n\n_**Examples:**_\n\nreserve as set 10,12345\n\nSee **RESERVE**,**SCREEN**,**SET**,**WORK**,**DATA**.');
+            Completion_datascreen.documentation = new vscode.MarkdownString('**DATASCREEN**\n\n**DATASCREEN** identifies that the memory bank being reserved is for a permanent screen of 32kb in length.\n\n_**Example:**_\n\nreserve as set 10,12345\n\nSee **RESERVE**,**SCREEN**,**SET**,**WORK**,**DATA**.');
             Completion_datascreen.kind = vscode.CompletionItemKind.Class;
             const Completion_set = new vscode.CompletionItem('set');
-            Completion_set.documentation = new vscode.MarkdownString('**SET**\n\n**SET** identifies that the memory bank being reserved is for a character set.\n\n_**Examples:**_\n\nreserve as set 10,12345\n\nSee **RESERVE**,**SCREEN**,**DATASCREEN**,**WORK**,**DATA**.');
+            Completion_set.documentation = new vscode.MarkdownString('**SET**\n\n**SET** identifies that the memory bank being reserved is for a character set.\n\n_**Example:**_\n\nreserve as set 10,12345\n\nSee **RESERVE**,**SCREEN**,**DATASCREEN**,**WORK**,**DATA**.');
             Completion_set.kind = vscode.CompletionItemKind.Class;
             const Completion_work = new vscode.CompletionItem('work');
-            Completion_work.documentation = new vscode.MarkdownString('**WORK**\n\n**WORK** identifies that the memory bank being reserved is temporary.\n\n_**Examples:**_\n\nreserve as work 10,12345\n\nSee **RESERVE**,**SCREEN**,**DATASCREEN**,**SET**,**DATA**.');
+            Completion_work.documentation = new vscode.MarkdownString('**WORK**\n\n**WORK** identifies that the memory bank being reserved is temporary.\n\n_**Example:**_\n\nreserve as work 10,12345\n\nSee **RESERVE**,**SCREEN**,**DATASCREEN**,**SET**,**DATA**.');
             Completion_work.kind = vscode.CompletionItemKind.Class;
             const Completion_memdata = new vscode.CompletionItem('data');
-            Completion_memdata.documentation = new vscode.MarkdownString('**DATA**\n\n**DATA** identifies that the memory bank being reserved is permanent.\n\n_**Examples:**_\n\nreserve as work 10,12345\n\nSee **RESERVE**,**SCREEN**,**DATASCREEN**,**SET**,**WORK**.');
+            Completion_memdata.documentation = new vscode.MarkdownString('**DATA**\n\n**DATA** identifies that the memory bank being reserved is permanent.\n\n_**Example:**_\n\nreserve as work 10,12345\n\nSee **RESERVE**,**SCREEN**,**DATASCREEN**,**SET**,**WORK**.');
             Completion_memdata.kind = vscode.CompletionItemKind.Class;
             const Completion_data = new vscode.CompletionItem('data');
-            Completion_data.documentation = new vscode.MarkdownString('**DATA** _datalist_\n\n**DATA** allows you to incorporate lists of useful data directly inside your STOS program. This data can be loaded into a variable using the **READ** instruction.\n\n_**Examples:**_\n\ndata 1,2,3,"hello"\n\nSee **READ**,**RESTORE**.');
+            Completion_data.documentation = new vscode.MarkdownString('**DATA** _datalist_\n\n**DATA** allows you to incorporate lists of useful data directly inside your STOS program. This data can be loaded into a variable using the **READ** instruction.\n\n_**Example:**_\n\ndata 1,2,3,"hello"\n\nSee **READ**,**RESTORE**.');
             Completion_data.kind = vscode.CompletionItemKind.Constructor;
             /////////////
             // Extensions
