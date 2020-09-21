@@ -691,7 +691,12 @@ function activate(context) {
             const Completion_hunt = new vscode.CompletionItem('hunt');
             //Completion_hunt.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
             Completion_hunt.kind = vscode.CompletionItemKind.Function;
-            //bcopy|bgrab|start|length|load|save|bload|bsave|copy|fill|hunt
+            const Completion_charlen = new vscode.CompletionItem('charlen');
+            //Completion_charlen.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_charlen.kind = vscode.CompletionItemKind.Function;
+            const Completion_charcopy = new vscode.CompletionItem('charcopy');
+            //Completion_charcopy.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+            Completion_charcopy.kind = vscode.CompletionItemKind.Keyword;
             return [
                 Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan,
                 Completion_log, Completion_ln, Completion_exp, Completion_sqr, Completion_abs, Completion_int, Completion_sgn, Completion_max, Completion_min, Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
@@ -723,7 +728,8 @@ function activate(context) {
                 Completion_menu$,
                 Completion_instr, Completion_left$, Completion_right$, Completion_mid$,
                 Completion_sort, Completion_match,
-                Completion_bcopy, Completion_bgrab, Completion_start, Completion_length, Completion_load, Completion_save, Completion_bload, Completion_bsave, Completion_copy, Completion_fill, Completion_hunt
+                Completion_bcopy, Completion_bgrab, Completion_start, Completion_length, Completion_load, Completion_save, Completion_bload, Completion_bsave, Completion_copy, Completion_fill, Completion_hunt,
+                Completion_charlen, Completion_charcopy
             ];
         }
     });
