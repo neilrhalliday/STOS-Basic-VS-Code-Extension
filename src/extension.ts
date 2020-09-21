@@ -844,7 +844,22 @@ export function activate(context: vscode.ExtensionContext) {
 			//Completion_menu$.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
 			Completion_menu$.kind = vscode.CompletionItemKind.Keyword;
 
-			//(menu|on menu|mnbar|mnselect)
+			const Completion_instr = new vscode.CompletionItem('instr');
+			//Completion_instr.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_instr.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_left$ = new vscode.CompletionItem('left$');
+			//Completion_left$.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_left$.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_right$ = new vscode.CompletionItem('right$');
+			//Completion_right$.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_right$.kind = vscode.CompletionItemKind.Function;
+
+			const Completion_mid$ = new vscode.CompletionItem('mid$');
+			//Completion_mid$.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_mid$.kind = vscode.CompletionItemKind.Function;
+
 			return [
 				Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan,
 				Completion_log, Completion_ln, Completion_exp, Completion_sqr, Completion_abs, Completion_int, Completion_sgn, Completion_max, Completion_min, Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
@@ -873,7 +888,8 @@ export function activate(context: vscode.ExtensionContext) {
 				Completion_tremolo, Completion_stoptremolo, Completion_stopnoise, Completion_noiseonly, Completion_ntremolo,
 				Completion_icon$,
 				Completion_menu, Completion_onmenu, Completion_mnbar, Completion_mnselect,
-				Completion_menu$
+				Completion_menu$,
+				Completion_instr, Completion_left$, Completion_right$, Completion_mid$
 
 			];
 		}
