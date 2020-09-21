@@ -723,6 +723,32 @@ export function activate(context: vscode.ExtensionContext) {
 			//Completion_fileselect$.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
 			Completion_fileselect$.kind = vscode.CompletionItemKind.Function;
 
+			const Completion_llist = new vscode.CompletionItem('llist');
+			//Completion_llist.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_llist.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_lprint = new vscode.CompletionItem('lprint');
+			//Completion_lprint.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_lprint.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_ldir = new vscode.CompletionItem('ldir');
+			//Completion_ldir.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_ldir.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_llistbank = new vscode.CompletionItem('llistbank');
+			//Completion_llistbank.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_llistbank.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_hardcopy = new vscode.CompletionItem('hardcopy');
+			//Completion_hardcopy.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_hardcopy.kind = vscode.CompletionItemKind.Keyword;
+
+			const Completion_windcopy = new vscode.CompletionItem('windcopy');
+			//Completion_windcopy.documentation = new vscode.MarkdownString('_x_=**INT**(_y#_)\n\n**INT** rounds down the value of _y#_ and converts it into a whole number.\n\n_**Examples:**_\n\nprint INT(1.25)   \n1   \nprint INT(-1.25)   \n- 2');
+			Completion_windcopy.kind = vscode.CompletionItemKind.Keyword;
+
+
+			// (llist|lprint|ldir|listbank|hardcopy|windcopy)
 			return [
 				Completion_inc, Completion_dec, Completion_deg, Completion_rad, Completion_sin, Completion_coz, Completion_tan, Completion_asin, Completion_acoz, Completion_atan, Completion_hsin, Completion_hcoz, Completion_htan,
 				Completion_log, Completion_ln, Completion_exp, Completion_sqr, Completion_abs, Completion_int, Completion_sgn, Completion_max, Completion_min, Completion_swap, Completion_deffn, Completion_fn, Completion_rnd, Completion_fix,
@@ -745,7 +771,8 @@ export function activate(context: vscode.ExtensionContext) {
 				Completion_xmouse, Completion_ymouse, Completion_mousekey, Completion_changemouse, Completion_limitmouse, Completion_hide, Completion_show,
 				Completion_joy, Completion_jleft, Completion_jright, Completion_jup, Completion_jdown, Completion_fire,
 				Completion_open, Completion_close, Completion_eof, Completion_lof, Completion_pof, Completion_field, Completion_put, Completion_get, Completion_port, Completion_dir, Completion_previous, Completion_drive, Completion_drvmap, Completion_dfree, Completion_mkdir, 
-				Completion_rmdir, Completion_kill, Completion_dir$, Completion_dirfirst$, Completion_dirnext$, Completion_fileselect$
+				Completion_rmdir, Completion_kill, Completion_dir$, Completion_dirfirst$, Completion_dirnext$, Completion_fileselect$,
+				Completion_llist, Completion_lprint, Completion_ldir, Completion_llistbank, Completion_hardcopy, Completion_windcopy
 
 			];
 		}
