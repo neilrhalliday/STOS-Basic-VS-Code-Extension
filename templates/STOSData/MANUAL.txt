@@ -1,0 +1,82 @@
+RSCRIPT for STOS The Creator v1.0.0
+
+1. What is RSCRIPT?
+2. Numbering of lines
+3. Include files
+4. Labels
+5. Build and import your program in STOS
+6. Contact
+
+1. What is RSCRIPT?
+-------------------
+RSCRIPT is a code parser developed in Java and that gives more flexibility when programming with older languages
+(such as BASIC for example).
+
+This version for STOS simplifies some aspects of programming. It is no longer necessary to use line numbering, RSCRIPT will
+do it. You can use labels and call them using the GOTO, GOSUB, GOTO, ON GOSUB, RESTORE, RESUME and ON ERROR commands.
+
+It is possible to do code inclusion, as could the C/C++ or Java languages. This allows for a more readable development and
+easier to maintain. Thus, you can separate each part of your program into different files.
+
+RSCRIPT will take care of everything in one code.
+
+2. Numbering of lines
+---------------------
+STOS is a BASIC language that uses line numbering. It is not always easy, when   one modifies his code, to be sure that the
+calls of line by GOTO, GOSUB ... are always respected.
+
+It is not uncommon to have to manually update the line numbering for the program to keep running.
+
+With RSCRIPT, the STOS developer no longer has to worry about numbering. He can  program without numbering his lines. RSCRIPT
+will do this for him, and will auto-matically update the numbering in the final STOS code.
+
+The numbering of the lines is from 10 to 10.
+
+3. Include files
+----------------
+To facilitate the development of your STOS program, you can separate the different parts of your program into files, which you
+can include with the #INCLUDE command of RSCRIPT.
+
+The syntax of the command is: #INCLUDE <file to include>. The #INCLUDE command must be on a single line, without any other code.
+
+WARNING: the name of the file to be included must be, as in JAVA, named as: folder1.folder2.filename.
+For example: #INCLUDE inc.screen.title, will load the file in this path inc/screen/title.rscript.
+
+It is not necessary to put the .rscript extension in the #INCLUDE command. However, do not forget to assign this extension to
+your name of file.
+
+4. Labels
+---------
+STOS is a language that uses line numbering. Unlike AMOS (for Amiga), it does not use the concept of labels. A label is an
+anchor, placed at a specific place of the code, and which can be called by the commands GOTO, GOSUB ...
+
+RSCRIPT allows today to develop in STOS using a system of labels, similar to that of AMOS. To do this, simply use the command
+#LABEL <name of the label>.
+
+It is of course possible to call a label using the GOTO, GOSUB, ON GOTO, ON GOSUB, On ERROR, RESUME and RESTORE commands.
+
+For example, to call the label named 'title' with GOTO, we will write: GOTO @title. NOTE: With RESTORE command, You must add
+ ' + 10' after the name of the called label.
+
+5. Build and import your program in STOS
+----------------------------------------
+From Visual Code, build your STOS program by pressing the 'SHIFT+CTRL+B' keys. The build.asc file should be generated in the
+'sys/STOS/HD/PROJECT' folder.
+
+Launch the Steem Emulator, specially prepared for STOS. Run the BASIC206.PRG program from the 'C:/STOS' folder.
+
+From STOS, press the F7 key and click on the D drive. Select the 'BUILD.ASC' file. When the file is loaded, press the F6 key
+to test your program.
+
+Over.
+
+7. Contact
+----------
+Baptiste Bideaux
+baptiste.bideaux@gmail.com
+
+On FaceBook in these groups :
+Amiga Pour Toujours
+Atari Pour Toujours
+AmosPro Coding
+STOS Coders - Atari ST

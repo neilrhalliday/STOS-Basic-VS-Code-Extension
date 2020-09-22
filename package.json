@@ -25,12 +25,19 @@
 		"watch": "tsc -watch -p ./"
 	},
 	"devDependencies": {
+		"appdata-path": "^1.0.0",
 		"@types/node": "^12.12.0",
 		"@typescript-eslint/eslint-plugin": "^3.0.2",
 		"@typescript-eslint/parser": "^3.0.2",
 		"eslint": "^7.1.0",
 		"typescript": "^4.0.2",
-		"@types/vscode": "^1.32.0"
+		"@types/vscode": "^1.32.0",
+		"glob": "^7.1.5",
+		"line-reader": "^0.4.0",
+		"node-fetch": "^2.6.0",
+		"vsce": "^1.74.0",
+		"@types/glob": "^7.1.1",
+		"vscode-test": "^1.3.0"
 	},
 	"categories": [
 		"Programming Languages",
@@ -69,6 +76,16 @@
 				"label": "STOS",
 				"uiTheme": "vs-dark",
 				"path": "./themes/stos-color-theme.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "stos.stosnew",
+				"title": "STOS New"
+			},
+			{
+				"command": "stos.stosrun",
+				"title": "STOS Run"
 			}
 		]
 	}
