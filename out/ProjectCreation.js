@@ -6,6 +6,7 @@ const path = require("path");
 const appdata_path_1 = require("appdata-path");
 const dirUtils = require("./directoryUtilities");
 const cp = require("child_process");
+const process_1 = require("process");
 /**
  * Main class to handle the logic of the Project Templates
  * @export
@@ -97,6 +98,9 @@ class ProjectCreation {
      * @param workspace current workspace folder to populate
      */
     async addFromTemplate(workspace) {
+        // ***
+        // *** Ask for the path to save the project
+        // ***
         let userPath = path.join(path.dirname(path.dirname(appdata_path_1.default())));
         let projectLocationInput = {
             prompt: `Project Location`,
@@ -105,6 +109,8 @@ class ProjectCreation {
         // get user's input
         let projectLocation = await vscode.window.showInputBox(projectLocationInput).then(value => {
             if (!value) {
+                vscode.window.showErrorMessage('STOS project creation halted.');
+                process_1.exit;
                 return projectLocation;
             }
             return value;
@@ -198,6 +204,19 @@ class ProjectCreation {
         let uri = vscode.Uri.file(workspace);
         let commandLine = 'dotnet restore';
         let { stdout, stderr } = await this.exec(commandLine, { cwd: workspace });
+        // ask for build location
+        let DefaultBuildLocation = projectLocation + "\\" + projectName + "\\main.stos";
+        let BuildLocationInput = {
+            prompt: `Enter the path and filename for the build`,
+            value: DefaultBuildLocation
+        };
+        // get user's input
+        let projectNameBuildLocation = await vscode.window.showInputBox(BuildLocationInput).then(value => {
+            if (!value) {
+                return projectName;
+            }
+            return value;
+        });
         vscode.window.showInformationMessage(projectName + " project created successfully.");
         vscode.commands.executeCommand('vscode.openFolder', uri);
         return template;

@@ -1,51 +1,43 @@
 {
-	"if": {
+	"Snippet: All Off": {
 		"scope": "stos",
-		"prefix": "if",
+		"prefix": "alloff",
 		"body": [
-			"if ${1:condition} then",
-			"\t$0"
+			"key off : curs off : click off : hide : auto back off : synchro off$0"
 		],
-		"description": "If condition"
+		"description": "Snippet: All Off"
 	},
-	"else": {
+		"Snippet: All on": {
 		"scope": "stos",
-		"prefix": "else",
+		"prefix": "allon",
 		"body": [
-			"else",
-			"\t$0"
+			"key on : curs on : click on : hide : auto back on : synchro on$0"
 		],
-		"description": "Else branch"
+		"description": "Snippet: All Off"
 	},
-	"for": {
-		"scope": "for",
-		"prefix": "for",
+
+		"Snippet: Low Resolution": {
+		"scope": "stos",
+		"prefix": "lowres",
 		"body": [
-			"for ${1:init}, ${2:condition}, ${3:step}",
-			"\t$0",
-			"next"
+			"mode 0 :"
 		],
-		"description": "For loop"
+		"description": "Snippet: Low Resolution"
 	},
-	    "repeat": {
-        "scope": "stos",
-        "prefix": "repeat",
-        "body": [
-            "repeat",
-            "\t$0",
-            "until ${1:condition}"
-        ],
-        "description": "Repeat loop"
-    }
-	,
-	    "while": {
-        "scope": "stos",
-        "prefix": "while",
-        "body": [
-            "while ${1:condition}",
-            "\t$0",
-            "wend"
-        ],
-        "description": "While loop"
-    }
+	"Snippet: Medium Resolution": {
+		"scope": "stos",
+		"prefix": "medres",
+		"body": [
+			"mode 1 :"
+		],
+		"description": "Snippet: Medium Resolution"
+	},
+	"Snippet: High Resolution": {
+		"scope": "stos",
+		"prefix": "hires",
+		"body": [
+			"mode 2 :"
+		],
+		"description": "Snippet: High Resolution"
+	}
 }

@@ -7,6 +7,7 @@ import getAppDataPath from "appdata-path";
 import dirUtils = require("./directoryUtilities");
 import * as cp from 'child_process';
 import {WorkspaceConfiguration} from 'vscode';
+import { exit } from 'process';
 
 /**
  * Main class to handle the logic of the Project Templates
@@ -113,6 +114,9 @@ export default class ProjectCreation {
      */
     public async addFromTemplate(workspace : string) {
 
+        // ***
+        // *** Ask for the path to save the project
+        // ***
         let userPath: string = path.join(path.dirname(path.dirname(getAppDataPath())));
         let projectLocationInput = <vscode.InputBoxOptions> {
             prompt: `Project Location`,
@@ -123,12 +127,20 @@ export default class ProjectCreation {
         let projectLocation : string = await vscode.window.showInputBox(projectLocationInput).then(
             value => {
                 if (!value) {
+                    vscode.window.showErrorMessage('STOS project creation halted.');
+                    exit;
                     return projectLocation;
                 }
                 return value;
             }
            
         );
+
+
+
+
+
+
         let defaultProjectName: string = "MySTOSProgram";
         defaultProjectName =  this.setDefaultProjectName(projectLocation,"SampleSTOSApp") === "" ? defaultProjectName : this.setDefaultProjectName(projectLocation,"SampleSTOSApp");
         let variableInput = <vscode.InputBoxOptions> {
@@ -234,11 +246,30 @@ export default class ProjectCreation {
             }
             return true;
         };  // copy function
+
         // actually copy the file recursively
         await dirUtils.CopyDir(templateDir, workspace, FileCopy);    
         let uri = vscode.Uri.file(workspace);
         let commandLine = 'dotnet restore';
-        let { stdout, stderr } = await this.exec(commandLine, { cwd: workspace });		
+        let { stdout, stderr } = await this.exec(commandLine, { cwd: workspace });
+
+        // ask for build location
+        let DefaultBuildLocation = projectLocation + "\\" + projectName + "\\main.stos"
+          let BuildLocationInput = <vscode.InputBoxOptions> {
+            prompt: `Enter the path and filename for the build`,
+            value: DefaultBuildLocation
+        };
+        
+        // get user's input
+        let projectNameBuildLocation : string = await vscode.window.showInputBox(BuildLocationInput).then(
+            value => {
+                if (!value) {
+                    return projectName;
+                }
+                return value;
+            }
+        );
+
         vscode.window.showInformationMessage(projectName + " project created successfully.");
         vscode.commands.executeCommand('vscode.openFolder', uri);
         return template;
