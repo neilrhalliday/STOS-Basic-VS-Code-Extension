@@ -6,7 +6,6 @@ const path = require("path");
 const appdata_path_1 = require("appdata-path");
 const dirUtils = require("./directoryUtilities");
 const cp = require("child_process");
-const process_1 = require("process");
 /**
  * Main class to handle the logic of the Project Templates
  * @export
@@ -102,37 +101,62 @@ class ProjectCreation {
         // *** Ask for the path to save the project
         // ***
         let userPath = path.join(path.dirname(path.dirname(appdata_path_1.default())));
-        let projectLocationInput = {
-            prompt: `Project Location`,
-            value: userPath
-        };
-        // get user's input
-        let projectLocation = await vscode.window.showInputBox(projectLocationInput).then(value => {
-            if (!value) {
-                vscode.window.showErrorMessage('STOS project creation halted.');
-                process_1.exit;
-                return projectLocation;
-            }
-            return value;
-        });
+        let projectLocationInput = { prompt: `Project Location`, value: userPath };
+        let projectLocation = await vscode.window.showInputBox(projectLocationInput).then(value => { if (!value) {
+            return '__QUIT__';
+        } return value; });
+        if (projectLocation == '__QUIT__') {
+            vscode.window.showErrorMessage('New STOS project was not created.');
+            return;
+        }
+        // ***
+        // *** Ask for the name of the project
+        // ***
         let defaultProjectName = "MySTOSProgram";
         defaultProjectName = this.setDefaultProjectName(projectLocation, "SampleSTOSApp") === "" ? defaultProjectName : this.setDefaultProjectName(projectLocation, "SampleSTOSApp");
-        let variableInput = {
+        let ProjectNameInput = {
             prompt: `Project Name`,
             value: defaultProjectName
         };
         // get user's input
-        let projectName = await vscode.window.showInputBox(variableInput).then(value => {
-            if (!value) {
-                return projectName;
-            }
-            return value;
-        });
+        let projectName = await vscode.window.showInputBox(ProjectNameInput).then(value => { if (!value) {
+            return '__QUIT__';
+        } return value; });
+        if (projectName == '__QUIT__') {
+            vscode.window.showErrorMessage('New STOS project was not created.');
+            return;
+        }
+        // ***
+        // *** Ask for where we should create the finished build file
+        // ***
+        let defaultBuildFile = "./stos/build.asc";
+        let BuildFileInput = { prompt: `Enter the path and filename to create your STOS file`, value: defaultBuildFile };
+        let BuildFileName = await vscode.window.showInputBox(BuildFileInput).then(value => { if (!value) {
+            return '__QUIT__';
+        } return value; });
+        if (BuildFileName == '__QUIT__') {
+            vscode.window.showErrorMessage('New STOS project was not created.');
+            return;
+        }
+        let BuildFile_Path = path.dirname(BuildFileName);
+        let BuildFile_Name = path.basename(BuildFileName);
+        console.log(BuildFile_Path);
+        console.log(BuildFile_Name);
         workspace = path.join(projectLocation, projectName);
         if (fileSystem.existsSync(workspace)) {
             vscode.window.showInformationMessage("Please provide the new project name since given project name already has been exist in the project location");
             return;
         }
+        // ***
+        // *** Variable definition
+        // ***
+        let BuildDotBatFile = projectLocation + "\\" + projectName + "\\rscript\\build.bat";
+        //let BuildDotBatContent: string = "@echo off\nJAVA -jar rscript/CodeParser.jar source-path=./ source=main.stos output-path=./stos output=build.asc";
+        let BuildDotBatContent = "@echo off\nJAVA -jar rscript/CodeParser.jar source-path=./ source=main.stos output-path=" + BuildFile_Path + " output=" + BuildFile_Name;
+        console.log(BuildDotBatContent);
+        // ***
+        // *** Create template project folder 
+        // ***
         let template = "STOSData";
         // get template folder
         let templateRoot = await this.getTemplatesDirectory();
@@ -186,7 +210,7 @@ class ProjectCreation {
                 if (!src.includes(".ico") && !src.includes("open-iconic")) {
                     // get src file contents
                     let fileContents = fileSystem.readFileSync(src);
-                    fileContents = Buffer.from(fileContents.toString().replace(new RegExp('STOSData', 'gi'), projectName));
+                    //fileContents = Buffer.from(fileContents.toString().replace(new RegExp('STOSData', 'gi'), projectName));
                     // ensure directories exist
                     let parent = path.dirname(dest);
                     dirUtils.CreateDirectory(parent);
@@ -201,24 +225,21 @@ class ProjectCreation {
         }; // copy function
         // actually copy the file recursively
         await dirUtils.CopyDir(templateDir, workspace, FileCopy);
-        let uri = vscode.Uri.file(workspace);
         let commandLine = 'dotnet restore';
         let { stdout, stderr } = await this.exec(commandLine, { cwd: workspace });
-        // ask for build location
-        let DefaultBuildLocation = projectLocation + "\\" + projectName + "\\main.stos";
-        let BuildLocationInput = {
-            prompt: `Enter the path and filename for the build`,
-            value: DefaultBuildLocation
-        };
-        // get user's input
-        let projectNameBuildLocation = await vscode.window.showInputBox(BuildLocationInput).then(value => {
-            if (!value) {
-                return projectName;
+        // ***
+        // *** Create the build.bat file based on what the user has entered
+        // ***
+        fileSystem.writeFile(BuildDotBatFile, BuildDotBatContent, function (FileError) {
+            if (FileError) {
+                return console.error(FileError);
             }
-            return value;
+            console.log("File created!");
         });
-        vscode.window.showInformationMessage(projectName + " project created successfully.");
-        vscode.commands.executeCommand('vscode.openFolder', uri);
+        vscode.window.showInformationMessage(projectName + " STOS project created successfully.");
+        // open folder space
+        let workspaceuri = vscode.Uri.file(workspace);
+        await vscode.commands.executeCommand('vscode.openFolder', workspaceuri);
         return template;
     }
     /**
