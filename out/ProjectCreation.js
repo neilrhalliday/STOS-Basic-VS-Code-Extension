@@ -140,8 +140,6 @@ class ProjectCreation {
         }
         let BuildFile_Path = path.dirname(BuildFileName);
         let BuildFile_Name = path.basename(BuildFileName);
-        console.log(BuildFile_Path);
-        console.log(BuildFile_Name);
         workspace = path.join(projectLocation, projectName);
         if (fileSystem.existsSync(workspace)) {
             vscode.window.showInformationMessage("Please provide the new project name since given project name already has been exist in the project location");
@@ -152,7 +150,6 @@ class ProjectCreation {
         // ***
         let BuildDotBatFile = projectLocation + "\\" + projectName + "\\stos2asc\\stos2asc.bat";
         let BuildDotBatContent = "@echo off\nJAVA stos2asc.stos2asc SourcePath=. SourceFile=main.stos DestPath=\"" + BuildFile_Path + "\" DestFile=\"" + BuildFile_Name + "\"";
-        console.log(BuildDotBatContent);
         // ***
         // *** Create template project folder 
         // ***
@@ -233,7 +230,6 @@ class ProjectCreation {
             if (FileError) {
                 return console.error(FileError);
             }
-            console.log("File created!");
         });
         vscode.window.showInformationMessage(projectName + " STOS project created successfully.");
         // open folder space

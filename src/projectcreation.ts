@@ -153,8 +153,7 @@ export default class ProjectCreation {
         }
         let BuildFile_Path: string = path.dirname(BuildFileName);
         let BuildFile_Name: string = path.basename(BuildFileName);        
-        console.log(BuildFile_Path);
-        console.log(BuildFile_Name);
+        
 
         workspace = path.join(projectLocation, projectName);
         if (fileSystem.existsSync(workspace)) {
@@ -169,7 +168,6 @@ export default class ProjectCreation {
         // ***
         let BuildDotBatFile: string = projectLocation + "\\" + projectName + "\\stos2asc\\stos2asc.bat";
         let BuildDotBatContent: string = "@echo off\nJAVA stos2asc.stos2asc SourcePath=. SourceFile=main.stos DestPath=\"" + BuildFile_Path + "\" DestFile=\"" + BuildFile_Name + "\"";
-        console.log(BuildDotBatContent);
         
 
         // ***
@@ -271,7 +269,6 @@ export default class ProjectCreation {
             if (FileError) {
                 return console.error(FileError);
             }
-            console.log("File created!");
             });
 
 
