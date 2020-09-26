@@ -150,9 +150,8 @@ class ProjectCreation {
         // ***
         // *** Variable definition
         // ***
-        let BuildDotBatFile = projectLocation + "\\" + projectName + "\\rscript\\build.bat";
-        //let BuildDotBatContent: string = "@echo off\nJAVA -jar rscript/CodeParser.jar source-path=./ source=main.stos output-path=./stos output=build.asc";
-        let BuildDotBatContent = "@echo off\nJAVA -jar rscript/CodeParser.jar source-path=./ source=main.stos output-path=\"" + BuildFile_Path + "\" output=\"" + BuildFile_Name + "\"";
+        let BuildDotBatFile = projectLocation + "\\" + projectName + "\\stos2asc\\stos2asc.bat";
+        let BuildDotBatContent = "@echo off\nJAVA stos2asc.stos2asc SourcePath=. SourceFile=main.stos DestPath=\"" + BuildFile_Path + "\" DestFile=\"" + BuildFile_Name + "\"";
         console.log(BuildDotBatContent);
         // ***
         // *** Create template project folder 

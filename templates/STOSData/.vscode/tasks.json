@@ -6,7 +6,7 @@
         {
             "label": "*Build STOS Program (Shift+Ctrl+B)",
             "type": "shell",
-            "command": ".\\rscript\\build.bat",
+            "command": ".\\stos2asc\\stos2asc.bat",
             "group": {
                 "kind": "build",
                 "isDefault": true
@@ -15,7 +15,7 @@
         {
             "label": "*Run Steem Emulator with STOS",
             "type": "shell",
-            "command": ".\\rscript\\run.bat",
+            "command": ".\\stos2asc\\run.bat",
             "problemMatcher": []            
         },        
     ]
