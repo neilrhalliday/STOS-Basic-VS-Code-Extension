@@ -152,7 +152,7 @@ class ProjectCreation {
         // ***
         let BuildDotBatFile = projectLocation + "\\" + projectName + "\\rscript\\build.bat";
         //let BuildDotBatContent: string = "@echo off\nJAVA -jar rscript/CodeParser.jar source-path=./ source=main.stos output-path=./stos output=build.asc";
-        let BuildDotBatContent = "@echo off\nJAVA -jar rscript/CodeParser.jar source-path=./ source=main.stos output-path=" + BuildFile_Path + " output=" + BuildFile_Name;
+        let BuildDotBatContent = "@echo off\nJAVA -jar rscript/CodeParser.jar source-path=./ source=main.stos output-path=\"" + BuildFile_Path + "\" output=\"" + BuildFile_Name + "\"";
         console.log(BuildDotBatContent);
         // ***
         // *** Create template project folder 

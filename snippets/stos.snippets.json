@@ -18,7 +18,7 @@
 
 		"Snippet: Low Resolution": {
 		"scope": "stos",
-		"prefix": "lowres",
+		"prefix": "lores",
 		"body": [
 			"mode 0 :"
 		],
@@ -39,5 +39,11 @@
 			"mode 2 :"
 		],
 		"description": "Snippet: High Resolution"
+	},
+	"Snippet: Init S as start of banks": {
+		"scope": "stos",
+		"prefix": "start_initS",
+		"body": [ "S1=start(1) : S2=start(2) : S3=start(3) : S4=start(4) : S5=start(5) : S6=start(6) : S7=start(7) : S8=start(8) : S9=start(9) : S10=start(10) : S11=start(11) : S12=start(12) : S13=start(13) : S14=start(14) : S15=start(15)"],
+		"description": "Snippet: Init S as start of banks"
 	}
 }

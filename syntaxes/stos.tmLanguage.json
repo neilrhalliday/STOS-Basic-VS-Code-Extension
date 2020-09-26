@@ -32,6 +32,10 @@
 		"keywords": {
 			"patterns": [
 				{
+					"name": "entity.other.inherited-class.stos",
+					"match": "(#include|#incbin|@).*$\n?"
+				},
+				{
 					"name": "keyword.control.stos",
 					"match": "\\b(?i)(data|wait|timer)\\b"
 				},
