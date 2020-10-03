@@ -16,7 +16,8 @@
 		"vscode": "^1.32.0"
 	},
 	"activationEvents": [
-		"onCommand:stos.stosnew"
+		"onCommand:stos.stosnew",
+		"*"
 	],
 	"main": "./out/extension.js",
 	"scripts": {
