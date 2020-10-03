@@ -63,7 +63,7 @@ class ProjectCreation {
         let directories = fileSystem.readdirSync(projectLocation).map(function (item) {
             // ignore hidden folders
             if (!/^\./.exec(item)) {
-                return fileSystem.statSync(path.join(projectLocation, item)).isDirectory ? path.join(projectLocation, item) : null;
+                return fileSystem.statSync(path.join(projectLocation, item)).isDirectory() ? path.join(projectLocation, item) : null;
             }
             return null;
         });
