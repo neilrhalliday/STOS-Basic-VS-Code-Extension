@@ -12,37 +12,8 @@ function activate(context) {
     let STOSProject = new projectcreation_1.default(context, vscode.workspace.getConfiguration('projectTemplates'));
     let stos_stosnew = vscode.commands.registerCommand('stos.stosnew', CreateSTOSProjectCommand.run.bind(undefined, STOSProject));
     context.subscriptions.push(stos_stosnew);
-    const stos_stosrun = vscode.commands.registerCommand('stos.stosrun', () => {
-        // Display a message box to the user
-        vscode.window.showInformationMessage('Opening STOS environment.');
-    });
-    context.subscriptions.push(stos_stosrun);
-    //vscode.window.showInformationMessage('STOS: The Game Creator');
     const provider1 = vscode.languages.registerCompletionItemProvider('stos', {
         provideCompletionItems(document, position, token, context) {
-            // Standard STOS Basic instructions
-            // -- Constants
-            //true|false|on|off|up|down|in|out|freeze|vbl
-            //const Completion_true = new vscode.CompletionItem('true');
-            //Completion_true.kind = vscode.CompletionItemKind.Constant;
-            //const Completion_false = new vscode.CompletionItem('false');
-            //Completion_false.kind = vscode.CompletionItemKind.Constant;
-            //const Completion_on = new vscode.CompletionItem('on');
-            //Completion_on.kind = vscode.CompletionItemKind.Constant;
-            //const Completion_off = new vscode.CompletionItem('off');
-            //Completion_off.kind = vscode.CompletionItemKind.Constant;
-            //const Completion_up = new vscode.CompletionItem('up');
-            //Completion_up.kind = vscode.CompletionItemKind.Constant;
-            //const Completion_down = new vscode.CompletionItem('down');
-            //Completion_down.kind = vscode.CompletionItemKind.Constant;
-            //const Completion_in = new vscode.CompletionItem('in');
-            //Completion_in.kind = vscode.CompletionItemKind.Constant;
-            //const Completion_out = new vscode.CompletionItem('out');
-            //Completion_out.kind = vscode.CompletionItemKind.Constant;
-            //const Completion_freeze = new vscode.CompletionItem('freeze');
-            //Completion_freeze.kind = vscode.CompletionItemKind.Constant;
-            //const Completion_vbl = new vscode.CompletionItem('vbl');
-            //Completion_vbl.kind = vscode.CompletionItemKind.Constant;
             // ** bold on/off  				ie.. **Bold**
             // _  italic on/off				ie.. _Italic_
             // *** bold italic on/off		ie.. ***Bold and Italic***
