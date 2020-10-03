@@ -205,8 +205,8 @@ class ProjectCreation {
                 } // while file exists  
                 if (!src.includes(".ico") && !src.includes("open-iconic")) {
                     // get src file contents
-                    let fileContents = fileSystem.readFileSync(src);
-                    //fileContents = Buffer.from(fileContents.toString().replace(new RegExp('STOSData', 'gi'), projectName));
+                    //let fileContents: Buffer = fileSystem.readFileSync(src);
+                    let fileContents = Buffer.from(fileSystem.readFileSync(src));
                     // ensure directories exist
                     let parent = path.dirname(dest);
                     dirUtils.CreateDirectory(parent);
