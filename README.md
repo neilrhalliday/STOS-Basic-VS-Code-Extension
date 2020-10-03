@@ -18,7 +18,8 @@ Syntax support for STOS: The Game Creator on the Atari ST, along with many popul
 
 ## Instructions
 You can find full instructions for using this extension by visiting the offical page at the STOS Coders [website](https://stoscoders.com/visual-studio-code).  
-## STOS: The Game Creator
+
+# STOS: The Game Creator
 ![Sample](./images/STOS.jpg)  
 **Created by**  
 Francois Lionet  
@@ -26,15 +27,15 @@ Francois Lionet
 **Published by**  
 Mandarin Software    
 
-## STOS Basic Language Support for Visual Studio Code
+# STOS: The Game Creator Visual Studio Code Extension
 **Created and Developed by**  
 Neil Halliday  
   
 Thank you to all our **Alpha Testers**: Geoff Harrison, Jeff Fulton, Carloni Christophe.  
 
 
-## STOS Coders
+# STOS Coders
 If you would like to learn more about STOS basic, visit us at our [website](https://stoscoders.com) or [Facebook](https://facebook.com/groups/stoscoders) Page.  
-![Sample light](./images/STOSCoders-dark.png)  
+![Sample light](./images/STOSCoders.png)  
 **https://stoscoders.com**  
 **https://facebook.com/groups/stoscoders**      

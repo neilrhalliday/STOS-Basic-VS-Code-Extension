@@ -237,7 +237,6 @@ export default class ProjectCreation {
 
                 if (!src.includes(".ico") && !src.includes("open-iconic")) {
                     // get src file contents
-                    //let fileContents: Buffer = fileSystem.readFileSync(src);
                     let fileContents = Buffer.from(fileSystem.readFileSync(src));
 
                     // ensure directories exist
