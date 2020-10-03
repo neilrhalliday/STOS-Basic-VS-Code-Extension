@@ -5,11 +5,13 @@ Syntax support for STOS: The Game Creator on the Atari ST, along with many popul
 - Autocompletion
 - Command hints
 - STOS colour theme
+- Include Files
+- Labels
+- .stos to .asc conversion
 
 ## Future releases
 - Syntax & error checking
 - Snippets
-- RScript integration
 - Emulator integration
 - Save as .BAS files?
 - Embedded memory banks?
@@ -30,12 +32,6 @@ Neil Halliday
   
 Thank you to all our **Alpha Testers**: Geoff Harrison, Jeff Fulton, Carloni Christophe.  
 
-
-## RScript
-**Created and developed by**  
-Baptiste Bideaux
-
-For more information on RScript check out Babtiste's [YouTube video](https://www.youtube.com/watch?v=cO6hO3XNPW0).  
 
 ## STOS Coders
 If you would like to learn more about STOS basic, visit us at our [website](https://stoscoders.com) or [Facebook](https://facebook.com/groups/stoscoders) Page.  
