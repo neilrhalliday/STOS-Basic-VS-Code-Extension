@@ -8,14 +8,10 @@ import CreateSTOSProjectCommand = require('./commands/projectcreationcommand');
 
 
 export function activate(context: vscode.ExtensionContext) {
-
-	//console.log('STOS: The Game Creator');
-
 	// Register STOS commands on Visual Studio Codes palette
 	let STOSProject = new ProjectCreation(context,vscode.workspace.getConfiguration('projectTemplates'));
-	let stos_stosgo = vscode.commands.registerCommand('stos.stosnew',
-		CreateSTOSProjectCommand.run.bind(undefined,STOSProject));
-	context.subscriptions.push(stos_stosgo);
+	let stos_stosnew = vscode.commands.registerCommand('stos.stosnew',CreateSTOSProjectCommand.run.bind(undefined,STOSProject));
+	context.subscriptions.push(stos_stosnew);
 
 	const stos_stosrun = vscode.commands.registerCommand('stos.stosrun', () => {
 		// Display a message box to the user

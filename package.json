@@ -2,7 +2,7 @@
 	"name": "stos-basic",
 	"displayName": "STOS Basic Language Support",
 	"description": "STOS: The Game Creator language extension to enable support for coding STOS Basic (Atari ST) in Visual Studio Code.",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "STOSCoders",
 	"repository": {
 		"type": "git",
@@ -73,7 +73,7 @@
 		],
 		"themes": [
 			{
-				"label": "STOS",
+				"label": "STOS: The Game Creator",
 				"uiTheme": "vs-dark",
 				"path": "./themes/stos-color-theme.json"
 			}
@@ -82,10 +82,6 @@
 			{
 				"command": "stos.stosnew",
 				"title": "STOS New"
-			},
-			{
-				"command": "stos.stosrun",
-				"title": "STOS Run"
 			}
 		]
 	}

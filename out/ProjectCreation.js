@@ -54,7 +54,7 @@ class ProjectCreation {
      * @return the templates directory
      */
     async getTemplatesDirectory() {
-        let dir = path.join(this.econtext.extensionPath, 'templates');
+        let dir = path.join(this.econtext.extensionPath, 'projectTemplates');
         return Promise.resolve(dir);
     }
     setDefaultProjectName(projectLocation, defaultProjectName) {

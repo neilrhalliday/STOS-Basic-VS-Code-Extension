@@ -61,7 +61,7 @@ export default class ProjectCreation {
      */
     public async getTemplatesDirectory(): Promise<string> {
 
-        let dir = path.join(this.econtext.extensionPath, 'templates');
+        let dir = path.join(this.econtext.extensionPath, 'projectTemplates');
 
         return Promise.resolve(dir);
     }
