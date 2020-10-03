@@ -1,5 +1,5 @@
 # STOS: The Game Creator Language Support
-Syntax support for STOS: The Game Creator on the Atari ST, along with many popular extensions such as Misty, Missing Link and Ninja Tracker. Use this extension to create your STOS programs in ASCII text format, and then load them into STOS using the _LOAD "filename.asc"_ command. Although this extension can be run independantly, you can enjoy an enhanced STOS coding experience by installing RScript.
+Syntax support for STOS: The Game Creator on the Atari ST, along with many popular extensions such as Misty, Missing Link and Ninja Tracker. Use this extension to create your STOS programs and then compile them to ASCII text format ready to load them into STOS using the _LOAD "filename.asc"_ command.
 ## Features
 - Syntax highlighting
 - Autocompletion
@@ -7,12 +7,14 @@ Syntax support for STOS: The Game Creator on the Atari ST, along with many popul
 - STOS colour theme
 - Include Files
 - Labels
-- .stos to .asc conversion
+- .stos to .asc compilation
 
 ## Future releases
 - Syntax & error checking
-- Snippets
+- More snippets
+- Additional extensions
 - Emulator integration
+- Load .BAS files?
 - Save as .BAS files?
 - Embedded memory banks?
 
@@ -20,7 +22,7 @@ Syntax support for STOS: The Game Creator on the Atari ST, along with many popul
 You can find full instructions for using this extension by visiting the offical page at the STOS Coders [website](https://stoscoders.com/visual-studio-code).  
 
 # STOS: The Game Creator
-![Sample](./images/STOS.jpg)  
+![Sample](images/STOS.jpg)  
 **Created by**  
 Francois Lionet  
 
@@ -36,6 +38,6 @@ Thank you to all our **Alpha Testers**: Geoff Harrison, Jeff Fulton, Carloni Chr
 
 # STOS Coders
 If you would like to learn more about STOS basic, visit us at our [website](https://stoscoders.com) or [Facebook](https://facebook.com/groups/stoscoders) Page.  
-![Sample light](./images/STOSCoders.png)  
+![Sample](images/STOSCoders.png)  
 **https://stoscoders.com**  
 **https://facebook.com/groups/stoscoders**      
