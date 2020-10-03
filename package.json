@@ -3,13 +3,13 @@
 	"displayName": "STOS Basic Language Support",
 	"description": "STOS: The Game Creator language extension to enable support for coding STOS Basic (Atari ST) in Visual Studio Code.",
 	"version": "0.0.2",
-	"publisher": "Neil Halliday",
+	"publisher": "STOSCoders",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Microsoft/vscode-extension-samples"
+		"url": "https://github.com/neilrhalliday/STOS-The-Game-Creator"
 	},
 	"bugs": {
-		"url": "https://github.com/Microsoft/vscode-extension-samples/issues"
+		"url": "https://github.com/neilrhalliday/STOS-The-Game-Creator/issues"
 	},
 	"engines": {
 		"vscode": "^1.32.0"
