@@ -1135,10 +1135,138 @@ export function activate(context: vscode.ExtensionContext) {
 			// Extensions
 			/////////////
 
-			// GBP
 			
 
-			// Ninja Tracker
+			// GBP by Neil Halliday
+			//
+			// GBP_lights, GBP_pready, GBP_even, GBP_setprt, GBP_specialkey, GBP_hcopy, GBP_dcrunch, GBP_paktype, GBP_paksize,
+			// GBP_fstart, GBP_flength, GBP_foffset, GBP_fastwipe, GBP_eliteunpack, GBP_tinyunpack, GBP_caunpack, GBP_capack, GBP_setpal, GBP_bcls, GBP_mirror,
+			// GBP_dacvolume, GBP_treble, GBP_bass, GBP_eplay, GBP_estop, GBP_eplace, GBP_jar, GBP_cookie, GBP_xpen, GBP_ypen,
+			//
+			const GBP_lights = new vscode.CompletionItem('lights');
+			GBP_lights.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**lights** `on` or **lights** `off`\n\nSwitches the drive lights for drive A and B on/off. Use this function to create cool effects such as flashing your drive lights to music.');
+			GBP_lights.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_pready = new vscode.CompletionItem('pready');
+			GBP_pready.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**pready**\n\nReturns `X` as true/false depending if your connected printer is ready or not.');
+			GBP_pready.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_even = new vscode.CompletionItem('even');
+			GBP_even.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**even**(`Y`)\n\nReturns `X` as true/false depending if the value `Y` is an even number.');
+			GBP_even.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_setprt = new vscode.CompletionItem('setprt');
+			GBP_setprt.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**setprt**(`Y`)\n\nSets the configuration of the attached printer. The value `Y` is a bitwise number representing the following bit numbers for off (0) / on (1):\n\n0 Dot Matrix / Daisy Wheel   \n1 Monochrome / Colour   \n2 Atari Printer / Epson or Compatible   \n3 Test Mode (Draft) / Print Mode (NLQ/LQ)   \n4 Centronics Port / RS-232 Port   \n5 Continuous Sheet / Single Sheet\n\n6-14 _Reserved_\n\n15 Always 0');
+			GBP_setprt.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_specialkey = new vscode.CompletionItem('specialkey');
+			GBP_specialkey.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**specialkey**(`Y`)\n\nSets or returns the current status of the Atari special keys. The status can be set by passing `Y` as a positive number, or read by passing `Y` as -1. `X` and `Y` are an 8 bit number representing the following:\n\n0 Right shift   \n1 Left shift   \n2 CTRL   \n3 ALT   \n4 CAPS   \n5 Right Mouse (CLR/HOME)   \n6 Left Mouse (INSERT)   \n7 _unused_\n\nIf the bit is set, the key is pressed.');
+			GBP_specialkey.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_hcopy = new vscode.CompletionItem('hcopy');
+			GBP_hcopy.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**hcopy** `X`\n\nSwitches off the system hardcopy (ALT & HELP) so that your programs cannot be interrupted. `X` is the operation mode where 0 is off, and 1 is on.\n\n_***Examples:***_\n\n>10 hcopy 0   \n>20 wait key   \n>30 hcopy 1');
+			GBP_hcopy.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_dcrunch = new vscode.CompletionItem('d crunch');
+			GBP_dcrunch.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**d crunch** `ADDR`\n\nUncompress data located at memory address `ADDR`. This routine will recognises files compressed with many of the most popular "packers" and will uncompress the file over the top of the compress data. Therefore, you must remember to make sure your memory banks are the correct size to hold the uncompressed file.');
+			GBP_dcrunch.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_paktype = new vscode.CompletionItem('paktype');
+			GBP_paktype.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**paktype**(`ADDR`)\n\nReturns in `X` a number that represents the packer that was used to compress the data in memory location `ADDR`. Zero will be returned if it is of an unknown format. `X` can have the following values:\n\n1 Speed Packer 2   \n2 Atomik v2.5   \n3 Ice v2.11   \n4 Automation v5   \n5 Ice v2.40   \n6 Fire v2.00   \n7 Speed Packer 3');
+			GBP_paktype.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_paksize = new vscode.CompletionItem('paksize');
+			GBP_paksize.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**paksize**(`ADDR`)\n\nReturns `X` as the uncompressed size of the file located at memory address `ADDR`. You don\'t need to worry about the type of packer that was used, it will be figured out automatically.');
+			GBP_paksize.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_fstart = new vscode.CompletionItem('fstart');
+			GBP_fstart.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**fstart**(`N`,`ADDR`)\n\nUsed in conjunction with a GBP file bank, **fstart** will return the start memory address of file `N` from the GBP file bank located at memory address `ADDR`.');
+			GBP_fstart.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_flength = new vscode.CompletionItem('flength');
+			GBP_flength.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**flength**(`N`,`ADDR`)\n\nUsed in conjunction with a GBP file bank, **flength** will return the length of file `N` from the GBP file bank located at memory address `ADDR`.');
+			GBP_flength.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_foffset = new vscode.CompletionItem('foffset');
+			GBP_foffset.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**foffset**(`N`,`ADDR`)\n\nUsed in conjunction with a GBP file bank, **foffset** will return the offset of file `N` in relation to the GBP file bank located at memory address `ADDR`.');
+			GBP_foffset.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_fastwipe = new vscode.CompletionItem('fastwipe');
+			GBP_fastwipe.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**fastwipe** `ADDR`\n\nA very fast version of the standard STOS cls command. It will clear 32000 bytes from memory address `ADDR`. **fastwipe** is also faster than wipe within the Missing Link.');
+			GBP_fastwipe.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_eliteunpack = new vscode.CompletionItem('elite unpack');
+			GBP_eliteunpack.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**elite unpack** `ADDR`,`DEST`\n\nUnpacks the Degas Elite compressed PC? picture stored at `ADDR` to memory address `DEST`.');
+			GBP_eliteunpack.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_tinyunpack = new vscode.CompletionItem('tiny unpack');
+			GBP_tinyunpack.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**tiny unpack** `ADDR`,`DEST`\n\nUnpacks the picture compressed in the Tiny format stored at `ADDR` to memory address `DEST`.');
+			GBP_tinyunpack.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_caunpack = new vscode.CompletionItem('ca unpack');
+			GBP_caunpack.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**ca unpack** `ADDR`,`DEST`\n\nUnpacks the Crack Art compressed picture at `ADDR` to memory address `DEST`.');
+			GBP_caunpack.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_capack = new vscode.CompletionItem('ca pack');
+			GBP_capack.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**ca pack** `ADDR`,`DEST`,`PAL`,`MODE`\n\nUses a standard STOS image located at `ADDR` and compresses it to a Crack Art image, storing it at memory address `DEST`. `PAL` represents the memory address of the palette information, which is usually `ADDR`+32000 and `MODE` is the pictures screen reslution. The value `X` is returned as the file size of the compressed image.');
+			GBP_capack.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_setpal = new vscode.CompletionItem('setpal');
+			GBP_setpal.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**setpal** `ADDR`\n\nQuickly copies data stored in memory address `ADDR` to the palette registers. Useful for storing large palette changes in a memory bank and using them when needed.');
+			GBP_setpal.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_bcls = new vscode.CompletionItem('bcls');
+			GBP_bcls.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**bcls** `ADDR`,`N`\n\nErases a set amount of scanlines from a single bit plane of the screen. `ADDR` is the address of the image that you want to clear (use +2, +4, +6 for other bit planes), and `N` is the number of scanlines you want to clear.');
+			GBP_bcls.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_mirror = new vscode.CompletionItem('mirror');
+			GBP_mirror.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**mirror** `OPT`,`ADDR`,`SY`,`DEST`,`Y`,`N`\n\nProduces a mirror image of the screen data stored at `ADDR` and starting at line `SY`. The image will be copied to the screen address `DEST` starting at scanline `Y`, copying `N`scanlines. The `OPT` changes the operation mode\n\n1 Normal   \n2 Half Copy   \n3 Double Copy');
+			GBP_mirror.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_dacvolume = new vscode.CompletionItem('dac volume');
+			GBP_dacvolume.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**dac volume** `VOL`\n\nSets the main volume of the STE sound output to volume `VOL`. `VOL` can be a number between 0 & 40, with 40 being the loudest.');
+			GBP_dacvolume.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_treble = new vscode.CompletionItem('treble');
+			GBP_treble.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**treble** `N`\n\nSets the amount of treble that is output from the STE. `N` can be a number between 0 & 12 (0 = -12dB, 6 = 0dB, 12 = +12dB).');
+			GBP_treble.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_bass = new vscode.CompletionItem('bass');
+			GBP_bass.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**bass** `N`\n\nSets the amount of bass that is output from the STE. `N` can be a number between 0 & 12 (0 = -12dB, 6 = 0dB, 12 = +12dB).');
+			GBP_bass.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_eplay = new vscode.CompletionItem('eplay');
+			GBP_eplay.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**eplay** `ADDR`,`LEN`,`SPEED`,`MONO`,`MODE`\n\nPlays a sample sound using the STE DMA sound chip. `ADDR` is the memory address of the sample, and `LEN` is the sample length to play. `SPEED` specifies the replay speed of the sample:\n\n0 = 6.258 kHz   \n1 = 12.517 kHz   \n2 = 25.033 kHz   \n3 = 50.066 kHz\n\n`MONO` determines if the sample is mono or stereo:\n\n1 = mono   \n0 = stereo.\n\n`MODE` can be:\n\n0 = stop   \n1 = play one   \n3 = loop forever');
+			GBP_eplay.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_estop = new vscode.CompletionItem('estop');
+			GBP_estop.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n**estop**\n\nStops the STE DAC from replaying a sample.');
+			GBP_estop.kind = vscode.CompletionItemKind.Keyword;
+
+			const GBP_eplace = new vscode.CompletionItem('eplace');
+			GBP_eplace.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**eplace**\n\nReturns the address in memory that is currently being replayed by the STE hardware.');
+			GBP_eplace.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_jar = new vscode.CompletionItem('jar');
+			GBP_jar.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**jar**\n\nReturns if "Cookie Jar" `X` exists on the computer. `X` will be true if a "Cookie Jar" does exist, or false if not.');
+			GBP_jar.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_cookie = new vscode.CompletionItem('cookie');
+			GBP_cookie.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**cookie**(`C$`)\n\nReturns the information specified in the cookie `C$`. `C$` must be passed as one of the official Atari cookies, otherwise no value will be returned. The offical cookies are as follows:\n\n_CPU to return the last two digits of the processor   \n_VDO to return the type of video shifter present   \n_SND to indicate the presence of a DMA sound chip   \n_MCH to return the type of machine   \n_SWI to indivate the position of the configuration switches   \n_FRB to get the address of the FASTRAM buffer.');
+			GBP_cookie.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_xpen = new vscode.CompletionItem('xpen');
+			GBP_xpen.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`X`=**xpen**\n\nReturns the x screen position of the STE light pen/gun.');
+			GBP_xpen.kind = vscode.CompletionItemKind.Function;
+
+			const GBP_ypen = new vscode.CompletionItem('ypen');
+			GBP_ypen.documentation = new vscode.MarkdownString('_**GBP Extension**_\n\n`Y`=**ypen**\n\nReturns the y screen position of the STE light pen/gun.');
+			GBP_ypen.kind = vscode.CompletionItemKind.Function;
+
+			// Ninja Tracker by Les Greenhalgh
+			//
+			// Ninja_trackplay, Ninja_vumeter, Ninja_trackfrequency, Ninja_trackpos, Ninja_trackpattern, Ninja_trackkey, Ninja_trackunpack, Ninja_trackname
+			//
 			const Ninja_trackplay = new vscode.CompletionItem('track play');
 			Ninja_trackplay.documentation = new vscode.MarkdownString('_**Ninja Tracker Extension**_\n\n**track play** `ADDRESS`\n\nStarts playing the Sound Tracker module at address `ADDRESS`. Unlike STOS tracker you don\'t need to preconvert them or anything strange like that. If a module is already playing then this same command stops the currently playing song.');
 			Ninja_trackplay.kind = vscode.CompletionItemKind.Keyword;
@@ -1210,6 +1338,10 @@ export function activate(context: vscode.ExtensionContext) {
 				Completion_qwindow, Completion_windopen, Completion_window, Completion_windon, Completion_windoff, Completion_windmove, Completion_windcopy, Completion_windel, Completion_title,
 				Completion_xcurs, Completion_ycurs, Completion_xtext, Completion_ytext, Completion_xgraphic, Completion_ygraphic,
 				Completion_dim, Completion_reserve, Completion_erase, Completion_clear, Completion_let, Completion_as, Completion_screen, Completion_datascreen, Completion_set, Completion_work, Completion_memdata, Completion_data,
+
+				GBP_lights, GBP_pready, GBP_even, GBP_setprt, GBP_specialkey, GBP_hcopy, GBP_dcrunch, GBP_paktype, GBP_paksize,
+				GBP_fstart, GBP_flength, GBP_foffset, GBP_fastwipe, GBP_eliteunpack, GBP_tinyunpack, GBP_caunpack, GBP_capack, GBP_setpal, GBP_bcls, GBP_mirror,
+				GBP_dacvolume, GBP_treble, GBP_bass, GBP_eplay, GBP_estop, GBP_eplace, GBP_jar, GBP_cookie, GBP_xpen, GBP_ypen,
 
 				Ninja_trackplay, Ninja_vumeter, Ninja_trackfrequency, Ninja_trackpos, Ninja_trackpattern, Ninja_trackkey, Ninja_trackunpack, Ninja_trackname
 			];

@@ -239,6 +239,10 @@
 				{
 					"name": "support.other.ninjatrackerextension.stos",
 					"match": "\\b(?i)(track play|vu meter|track frequency|track pos|track pattern|track key|track key|track info|track unpack|track name)\\b"
+				},
+				{
+					"name": "support.other.steextension.stos",
+					"match": "\\b(?i)(l stick|r stick|u stick|d stick|f stick|sticks|stick1|stick2|light x|light y|e palette|e colour|e colour|dac convert|dac speed|dac raw|dac loop|dac mono|dac stereo|dac m volume|dac l volume|dac r volume|dac mix|dac stop|hard inter|hard physic|hard screen size|hard screen offset|ste|blit cls|blit copy|blit halftone|blit source x inc|blit source y inc|blit dest x inc|blit dest y inc|blit source address|blit dest address|blit x count|blit y count|blit endmask 1|blit endmask 2|blit endmask 3|blit hop|blit op|blit h line|blit skew|blit smudge|blit nfsr|blit fxsr|blit hog|blitter|blit it|blit busy)\\b"
 				}
 			]
 		},
