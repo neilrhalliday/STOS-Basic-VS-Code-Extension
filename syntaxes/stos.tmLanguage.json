@@ -235,6 +235,10 @@
 				{
 					"name": "support.other.gbpextension.stos",
 					"match": "\\b(?i)(lights|pready|even|setptr|special key|hcopy|d crunch|paktype|paksize|fstart|flength|foffset|fastwipe|elite unpack|tiny unpack|ca unpack|ca pack|bcls|mirror|dac volume|treble|bass|eplay|estop|eplace|jar|cookie|xpen|ypen)\\b"
+				},
+				{
+					"name": "support.other.ninjatrackerextension.stos",
+					"match": "\\b(?i)(track play|vu meter|track frequency|track pos|track pattern|track key|track key|track info|track unpack|track name)\\b"
 				}
 			]
 		},
