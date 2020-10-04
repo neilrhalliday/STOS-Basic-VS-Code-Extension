@@ -2,7 +2,7 @@
 	"name": "stos-basic",
 	"displayName": "STOS: The Game Creator Language Support",
 	"description": "Enables support for coding STOS: The Game Creator basic from the Atari ST.",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"author": "Neil Halliday",
 	"publisher": "STOSCoders",
 	"repository": {
