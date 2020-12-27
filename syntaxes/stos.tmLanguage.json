@@ -33,7 +33,7 @@
 			"patterns": [
 				{
 					"name": "entity.other.inherited-class.stos",
-					"match": "(#include|#incbin).*$\n?"
+					"match": "(#include|#lineinc|#incbin).*$\n?"
 				},
 				{
 					"name": "entity.other.inherited-class.stos",
@@ -258,7 +258,7 @@
 			"patterns": [
 				{
 					"name": "comment.line.stos",
-					"match": "(rem|;).*$\n?",
+					"match": "(rem|;|//).*$\n?",
 					"captures": {
 						"1": {
 							"name": "punctuation.definition.comment.stos"
