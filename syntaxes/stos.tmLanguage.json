@@ -33,11 +33,11 @@
 			"patterns": [
 				{
 					"name": "entity.other.inherited-class.stos",
-					"match": "(#include|#lineinc|#incbin).*$\n?"
+					"match": "(#include|#incbin).*$\n?"
 				},
 				{
 					"name": "entity.other.inherited-class.stos",
-					"match": "(#numbering)"
+					"match": "(#lineinc)"
 				},
 				{
 					"name": "entity.other.inherited-class.stos",
